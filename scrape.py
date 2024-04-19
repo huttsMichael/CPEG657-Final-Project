@@ -16,6 +16,8 @@ def fetch_vehicle_options_selenium():
     driver.get("https://www.caranddriver.com/acura/integra/specs")
     print("Website loaded.")
 
+    vehicle_urls = []
+
     try:
         print("Locating the 'Research Cars' button...")
         research_cars_button = WebDriverWait(driver, 60).until(
@@ -56,14 +58,25 @@ def fetch_vehicle_options_selenium():
                 year_select = WebDriverWait(driver, 20).until(
                     EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Year']"))
                 )
+                time.sleep(0.1)
+
                 years = [option.text for option in year_select.find_elements(By.TAG_NAME, "option") if option.get_attribute("value") != "0"]
 
                 for year in years:
                     print(f"Year '{year}' selected with Make '{make_name}' and Model '{model_name}'.")
 
+                # Correctly format the model name for URL (replace spaces with dashes)
+                model_value_url = model_value.replace(" ", "-").lower()
+                url = f"https://www.caranddriver.com/{make_value}/{model_value_url}/specs"
+                vehicle_urls.append(url)
+                print(f"URL generated: {url}")
+
     except (NoSuchElementException, TimeoutException) as e:
         print("An error occurred:", e)
     finally:
+        print("List of all vehicle specs URLs:")
+        for url in vehicle_urls:
+            print(url)
         driver.quit()
 
 fetch_vehicle_options_selenium()
