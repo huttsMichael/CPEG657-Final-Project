@@ -1,0 +1,913 @@
+Make,Model,Year,URL
+Acura,ADX,2025,https://www.caranddriver.com/acura/adx/specs
+Acura,ILX,2017,https://www.caranddriver.com/acura/ilx/specs
+Acura,Integra,2023,https://www.caranddriver.com/acura/integra/specs
+Acura,Integra Type S,2024,https://www.caranddriver.com/acura/integra-type-s/specs
+Acura,MDX,2017,https://www.caranddriver.com/acura/mdx/specs
+Acura,NSX,2017,https://www.caranddriver.com/acura/nsx/specs
+Acura,RDX,2017,https://www.caranddriver.com/acura/rdx/specs
+Acura,RL,2012,https://www.caranddriver.com/acura/rl/specs
+Acura,RLX,2017,https://www.caranddriver.com/acura/rlx/specs
+Acura,TL,2014,https://www.caranddriver.com/acura/tl/specs
+Acura,TLX,2017,https://www.caranddriver.com/acura/tlx/specs
+Acura,TSX,2014,https://www.caranddriver.com/acura/tsx/specs
+Acura,ZDX,2013,https://www.caranddriver.com/acura/zdx/specs
+Afeela,EV Sedan,2026,https://www.caranddriver.com/afeela/ev-sedan/specs
+Alfa Romeo,4C,2017,https://www.caranddriver.com/alfa-romeo/4c/specs
+Alfa Romeo,8C,2010,https://www.caranddriver.com/alfa-romeo/8c/specs
+Alfa Romeo,33 Stradale,2025,https://www.caranddriver.com/alfa-romeo/33-stradale/specs
+Alfa Romeo,Giulia,2017,https://www.caranddriver.com/alfa-romeo/giulia/specs
+Alfa Romeo,Giulia Quadrifoglio,2017,https://www.caranddriver.com/alfa-romeo/giulia-quadrifoglio/specs
+Alfa Romeo,GTV,2021,https://www.caranddriver.com/alfa-romeo/gtv/specs
+Alfa Romeo,Stelvio,2018,https://www.caranddriver.com/alfa-romeo/stelvio/specs
+Alfa Romeo,Stelvio Quadrifoglio,2019,https://www.caranddriver.com/alfa-romeo/stelvio-quadrifoglio/specs
+Alfa Romeo,Tonale,2024,https://www.caranddriver.com/alfa-romeo/tonale/specs
+Aston Martin,DB9 GT,2016,https://www.caranddriver.com/aston-martin/db9-gt/specs
+Aston Martin,DB11,2017,https://www.caranddriver.com/aston-martin/db11/specs
+Aston Martin,DB12,2024,https://www.caranddriver.com/aston-martin/db12/specs
+Aston Martin,DBS,2012,https://www.caranddriver.com/aston-martin/dbs/specs
+Aston Martin,DBX,2021,https://www.caranddriver.com/aston-martin/dbx/specs
+Aston Martin,One-77,2011,https://www.caranddriver.com/aston-martin/one-77/specs
+Aston Martin,Rapide,2019,https://www.caranddriver.com/aston-martin/rapide/specs
+Aston Martin,Valhalla,2024,https://www.caranddriver.com/aston-martin/valhalla/specs
+Aston Martin,Valkyrie,2022,https://www.caranddriver.com/aston-martin/valkyrie/specs
+Aston Martin,Vanquish,2019,https://www.caranddriver.com/aston-martin/vanquish/specs
+Aston Martin,Vantage,2017,https://www.caranddriver.com/aston-martin/vantage/specs
+Aston Martin,Virage,2012,https://www.caranddriver.com/aston-martin/virage/specs
+Audi,A3,2017,https://www.caranddriver.com/audi/a3/specs
+Audi,A3 Sportback e-tron,2017,https://www.caranddriver.com/audi/a3-sportback-e-tron/specs
+Audi,A4,2017,https://www.caranddriver.com/audi/a4/specs
+Audi,A4 Allroad Quattro,2017,https://www.caranddriver.com/audi/a4-allroad-quattro/specs
+Audi,A5,2017,https://www.caranddriver.com/audi/a5/specs
+Audi,A5 Sportback,2018,https://www.caranddriver.com/audi/a5-sportback/specs
+Audi,A6,2017,https://www.caranddriver.com/audi/a6/specs
+Audi,A6 Allroad,2020,https://www.caranddriver.com/audi/a6-allroad/specs
+Audi,A6 e-tron,2025,https://www.caranddriver.com/audi/a6-e-tron/specs
+Audi,A7,2017,https://www.caranddriver.com/audi/a7/specs
+Audi,A8,2017,https://www.caranddriver.com/audi/a8/specs
+Audi,e-tron GT,2022,https://www.caranddriver.com/audi/e-tron-gt/specs
+Audi,Q3,2017,https://www.caranddriver.com/audi/q3/specs
+Audi,Q4 e-tron,2022,https://www.caranddriver.com/audi/q4-e-tron/specs
+Audi,Q5,2017,https://www.caranddriver.com/audi/q5/specs
+Audi,Q6 e-tron,2025,https://www.caranddriver.com/audi/q6-e-tron/specs
+Audi,Q7,2017,https://www.caranddriver.com/audi/q7/specs
+Audi,Q8,2019,https://www.caranddriver.com/audi/q8/specs
+Audi,Q8 e-tron,2019,https://www.caranddriver.com/audi/q8-e-tron/specs
+Audi,R8,2017,https://www.caranddriver.com/audi/r8/specs
+Audi,RS Q8,2020,https://www.caranddriver.com/audi/rs-q8/specs
+Audi,RS3,2017,https://www.caranddriver.com/audi/rs3/specs
+Audi,RS4,2008,https://www.caranddriver.com/audi/rs4/specs
+Audi,RS5,2019,https://www.caranddriver.com/audi/rs5/specs
+Audi,RS5 Sportback,2019,https://www.caranddriver.com/audi/rs5-sportback/specs
+Audi,RS6 Avant,2021,https://www.caranddriver.com/audi/rs6-avant/specs
+Audi,RS7,2018,https://www.caranddriver.com/audi/rs7/specs
+Audi,S3,2017,https://www.caranddriver.com/audi/s3/specs
+Audi,S4,2018,https://www.caranddriver.com/audi/s4/specs
+Audi,S5,2017,https://www.caranddriver.com/audi/s5/specs
+Audi,S5 Sportback,2018,https://www.caranddriver.com/audi/s5-sportback/specs
+Audi,S6,2017,https://www.caranddriver.com/audi/s6/specs
+Audi,S7,2017,https://www.caranddriver.com/audi/s7/specs
+Audi,S8,2017,https://www.caranddriver.com/audi/s8/specs
+Audi,SQ5,2017,https://www.caranddriver.com/audi/sq5/specs
+Audi,SQ6 e-tron,2025,https://www.caranddriver.com/audi/sq6-e-tron/specs
+Audi,SQ7,2020,https://www.caranddriver.com/audi/sq7/specs
+Audi,SQ8,2020,https://www.caranddriver.com/audi/sq8/specs
+Audi,SQ8 e-tron,2024,https://www.caranddriver.com/audi/sq8-e-tron/specs
+Audi,TT / TTS,2017,https://www.caranddriver.com/audi/tt-/-tts/specs
+Audi,TT RS,2018,https://www.caranddriver.com/audi/tt-rs/specs
+Bentley,Arnage,2009,https://www.caranddriver.com/bentley/arnage/specs
+Bentley,Azure,2010,https://www.caranddriver.com/bentley/azure/specs
+Bentley,Bentayga,2017,https://www.caranddriver.com/bentley/bentayga/specs
+Bentley,Brooklands,2010,https://www.caranddriver.com/bentley/brooklands/specs
+Bentley,Continental GT,2017,https://www.caranddriver.com/bentley/continental-gt/specs
+Bentley,Continental GT Speed,2012,https://www.caranddriver.com/bentley/continental-gt-speed/specs
+Bentley,Flying Spur,2017,https://www.caranddriver.com/bentley/flying-spur/specs
+Bentley,Mulsanne,2017,https://www.caranddriver.com/bentley/mulsanne/specs
+Bentley,Mulsanne Speed,2019,https://www.caranddriver.com/bentley/mulsanne-speed/specs
+BMW,1-series,2013,https://www.caranddriver.com/bmw/1-series/specs
+BMW,2-series,2017,https://www.caranddriver.com/bmw/2-series/specs
+BMW,2-series Gran Coupe,2020,https://www.caranddriver.com/bmw/2-series-gran-coupe/specs
+BMW,3-series,2017,https://www.caranddriver.com/bmw/3-series/specs
+BMW,3-series Wagon,2019,https://www.caranddriver.com/bmw/3-series-wagon/specs
+BMW,4-series,2017,https://www.caranddriver.com/bmw/4-series/specs
+BMW,4-series Gran Coupe,2017,https://www.caranddriver.com/bmw/4-series-gran-coupe/specs
+BMW,5-series,2017,https://www.caranddriver.com/bmw/5-series/specs
+BMW,6-series,2017,https://www.caranddriver.com/bmw/6-series/specs
+BMW,6-series Gran Coupe,2019,https://www.caranddriver.com/bmw/6-series-gran-coupe/specs
+BMW,6-series Gran Turismo,2019,https://www.caranddriver.com/bmw/6-series-gran-turismo/specs
+BMW,7-series,2017,https://www.caranddriver.com/bmw/7-series/specs
+BMW,8-series,2019,https://www.caranddriver.com/bmw/8-series/specs
+BMW,8-series Gran Coupe,2020,https://www.caranddriver.com/bmw/8-series-gran-coupe/specs
+BMW,i3,2017,https://www.caranddriver.com/bmw/i3/specs
+BMW,i4,2022,https://www.caranddriver.com/bmw/i4/specs
+BMW,i5,2024,https://www.caranddriver.com/bmw/i5/specs
+BMW,i7,2023,https://www.caranddriver.com/bmw/i7/specs
+BMW,i8,2017,https://www.caranddriver.com/bmw/i8/specs
+BMW,i8 M,2026,https://www.caranddriver.com/bmw/i8-m/specs
+BMW,iX,2022,https://www.caranddriver.com/bmw/ix/specs
+BMW,iX3,2026,https://www.caranddriver.com/bmw/ix3/specs
+BMW,M2,2017,https://www.caranddriver.com/bmw/m2/specs
+BMW,M3,2018,https://www.caranddriver.com/bmw/m3/specs
+BMW,M4,2017,https://www.caranddriver.com/bmw/m4/specs
+BMW,M5,2018,https://www.caranddriver.com/bmw/m5/specs
+BMW,M5 Touring,2025,https://www.caranddriver.com/bmw/m5-touring/specs
+BMW,M6,2018,https://www.caranddriver.com/bmw/m6/specs
+BMW,M6 Gran Coupe,2019,https://www.caranddriver.com/bmw/m6-gran-coupe/specs
+BMW,M8,2020,https://www.caranddriver.com/bmw/m8/specs
+BMW,M8 Gran Coupe,2020,https://www.caranddriver.com/bmw/m8-gran-coupe/specs
+BMW,X1,2017,https://www.caranddriver.com/bmw/x1/specs
+BMW,X2,2018,https://www.caranddriver.com/bmw/x2/specs
+BMW,X3,2017,https://www.caranddriver.com/bmw/x3/specs
+BMW,X3 M,2020,https://www.caranddriver.com/bmw/x3-m/specs
+BMW,X4,2017,https://www.caranddriver.com/bmw/x4/specs
+BMW,X4 M,2020,https://www.caranddriver.com/bmw/x4-m/specs
+BMW,X5,2017,https://www.caranddriver.com/bmw/x5/specs
+BMW,X5 M,2017,https://www.caranddriver.com/bmw/x5-m/specs
+BMW,X6,2017,https://www.caranddriver.com/bmw/x6/specs
+BMW,X6 M,2017,https://www.caranddriver.com/bmw/x6-m/specs
+BMW,X7,2019,https://www.caranddriver.com/bmw/x7/specs
+BMW,XM,2023,https://www.caranddriver.com/bmw/xm/specs
+BMW,Z4,2019,https://www.caranddriver.com/bmw/z4/specs
+Bollinger,B1,2022,https://www.caranddriver.com/bollinger/b1/specs
+Bollinger,B2,2022,https://www.caranddriver.com/bollinger/b2/specs
+Bugatti,Chiron,2019,https://www.caranddriver.com/bugatti/chiron/specs
+Bugatti,Divo,2020,https://www.caranddriver.com/bugatti/divo/specs
+Bugatti,Veyron,2014,https://www.caranddriver.com/bugatti/veyron/specs
+Buick,Cascada,2017,https://www.caranddriver.com/buick/cascada/specs
+Buick,Electra E5,2025,https://www.caranddriver.com/buick/electra-e5/specs
+Buick,Enclave,2017,https://www.caranddriver.com/buick/enclave/specs
+Buick,Encore,2017,https://www.caranddriver.com/buick/encore/specs
+Buick,Encore GX,2020,https://www.caranddriver.com/buick/encore-gx/specs
+Buick,Envision,2017,https://www.caranddriver.com/buick/envision/specs
+Buick,Envista,2024,https://www.caranddriver.com/buick/envista/specs
+Buick,LaCrosse,2017,https://www.caranddriver.com/buick/lacrosse/specs
+Buick,Lucerne,2011,https://www.caranddriver.com/buick/lucerne/specs
+Buick,Regal,2017,https://www.caranddriver.com/buick/regal/specs
+Buick,Regal GS,2017,https://www.caranddriver.com/buick/regal-gs/specs
+Buick,Regal TourX,2018,https://www.caranddriver.com/buick/regal-tourx/specs
+Buick,Verano,2017,https://www.caranddriver.com/buick/verano/specs
+Byton,M-Byte,2022,https://www.caranddriver.com/byton/m-byte/specs
+Cadillac,ATS,2017,https://www.caranddriver.com/cadillac/ats/specs
+Cadillac,ATS-V,2019,https://www.caranddriver.com/cadillac/ats-v/specs
+Cadillac,Celestiq,2024,https://www.caranddriver.com/cadillac/celestiq/specs
+Cadillac,CT4,2020,https://www.caranddriver.com/cadillac/ct4/specs
+Cadillac,CT4-V Blackwing,2022,https://www.caranddriver.com/cadillac/ct4-v-blackwing/specs
+Cadillac,CT5,2020,https://www.caranddriver.com/cadillac/ct5/specs
+Cadillac,CT5-V Blackwing,2022,https://www.caranddriver.com/cadillac/ct5-v-blackwing/specs
+Cadillac,CT6,2017,https://www.caranddriver.com/cadillac/ct6/specs
+Cadillac,CTS,2017,https://www.caranddriver.com/cadillac/cts/specs
+Cadillac,CTS-V,2019,https://www.caranddriver.com/cadillac/cts-v/specs
+Cadillac,DTS,2011,https://www.caranddriver.com/cadillac/dts/specs
+Cadillac,ELR,2016,https://www.caranddriver.com/cadillac/elr/specs
+Cadillac,Escalade / Escalade ESV,2017,https://www.caranddriver.com/cadillac/escalade-/-escalade-esv/specs
+Cadillac,Escalade EXT,2013,https://www.caranddriver.com/cadillac/escalade-ext/specs
+Cadillac,Escalade IQ,2025,https://www.caranddriver.com/cadillac/escalade-iq/specs
+Cadillac,Lyriq,2023,https://www.caranddriver.com/cadillac/lyriq/specs
+Cadillac,Optiq,2025,https://www.caranddriver.com/cadillac/optiq/specs
+Cadillac,SRX,2016,https://www.caranddriver.com/cadillac/srx/specs
+Cadillac,STS,2011,https://www.caranddriver.com/cadillac/sts/specs
+Cadillac,Vistiq,2026,https://www.caranddriver.com/cadillac/vistiq/specs
+Cadillac,XLR,2009,https://www.caranddriver.com/cadillac/xlr/specs
+Cadillac,XT4,2019,https://www.caranddriver.com/cadillac/xt4/specs
+Cadillac,XT5,2017,https://www.caranddriver.com/cadillac/xt5/specs
+Cadillac,XT6,2020,https://www.caranddriver.com/cadillac/xt6/specs
+Cadillac,XTS,2017,https://www.caranddriver.com/cadillac/xts/specs
+Chevrolet,Avalanche,2013,https://www.caranddriver.com/chevrolet/avalanche/specs
+Chevrolet,Aveo,2011,https://www.caranddriver.com/chevrolet/aveo/specs
+Chevrolet,Blazer,2019,https://www.caranddriver.com/chevrolet/blazer/specs
+Chevrolet,Blazer EV,2024,https://www.caranddriver.com/chevrolet/blazer-ev/specs
+Chevrolet,Bolt EUV,2022,https://www.caranddriver.com/chevrolet/bolt-euv/specs
+Chevrolet,Bolt EV,2017,https://www.caranddriver.com/chevrolet/bolt-ev/specs
+Chevrolet,Camaro,2017,https://www.caranddriver.com/chevrolet/camaro/specs
+Chevrolet,Camaro SUV,2025,https://www.caranddriver.com/chevrolet/camaro-suv/specs
+Chevrolet,Camaro Z/28,2015,https://www.caranddriver.com/chevrolet/camaro-z/28/specs
+Chevrolet,Camaro ZL1,2017,https://www.caranddriver.com/chevrolet/camaro-zl1/specs
+Chevrolet,City Express,2018,https://www.caranddriver.com/chevrolet/city-express/specs
+Chevrolet,Cobalt,2010,https://www.caranddriver.com/chevrolet/cobalt/specs
+Chevrolet,Colorado,2017,https://www.caranddriver.com/chevrolet/colorado/specs
+Chevrolet,Corvette,2017,https://www.caranddriver.com/chevrolet/corvette/specs
+Chevrolet,Corvette E-Ray,2024,https://www.caranddriver.com/chevrolet/corvette-e-ray/specs
+Chevrolet,Corvette EV,2025,https://www.caranddriver.com/chevrolet/corvette-ev/specs
+Chevrolet,Corvette SUV,2025,https://www.caranddriver.com/chevrolet/corvette-suv/specs
+Chevrolet,Corvette Z06,2019,https://www.caranddriver.com/chevrolet/corvette-z06/specs
+Chevrolet,Corvette ZR1,2019,https://www.caranddriver.com/chevrolet/corvette-zr1/specs
+Chevrolet,Cruze,2017,https://www.caranddriver.com/chevrolet/cruze/specs
+Chevrolet,Equinox,2017,https://www.caranddriver.com/chevrolet/equinox/specs
+Chevrolet,Equinox EV,2024,https://www.caranddriver.com/chevrolet/equinox-ev/specs
+Chevrolet,Express,2017,https://www.caranddriver.com/chevrolet/express/specs
+Chevrolet,HHR,2011,https://www.caranddriver.com/chevrolet/hhr/specs
+Chevrolet,Impala,2017,https://www.caranddriver.com/chevrolet/impala/specs
+Chevrolet,Malibu,2017,https://www.caranddriver.com/chevrolet/malibu/specs
+Chevrolet,Silverado 1500,2017,https://www.caranddriver.com/chevrolet/silverado-1500/specs
+Chevrolet,Silverado 1500 ZR2,2022,https://www.caranddriver.com/chevrolet/silverado-1500-zr2/specs
+Chevrolet,Silverado 2500HD / 3500HD,2017,https://www.caranddriver.com/chevrolet/silverado-2500hd-/-3500hd/specs
+Chevrolet,Silverado EV,2024,https://www.caranddriver.com/chevrolet/silverado-ev/specs
+Chevrolet,Sonic,2017,https://www.caranddriver.com/chevrolet/sonic/specs
+Chevrolet,Spark,2017,https://www.caranddriver.com/chevrolet/spark/specs
+Chevrolet,Spark EV,2016,https://www.caranddriver.com/chevrolet/spark-ev/specs
+Chevrolet,SS,2017,https://www.caranddriver.com/chevrolet/ss/specs
+Chevrolet,Suburban,2017,https://www.caranddriver.com/chevrolet/suburban/specs
+Chevrolet,Tahoe,2017,https://www.caranddriver.com/chevrolet/tahoe/specs
+Chevrolet,TrailBlazer,2021,https://www.caranddriver.com/chevrolet/trailblazer/specs
+Chevrolet,Traverse,2017,https://www.caranddriver.com/chevrolet/traverse/specs
+Chevrolet,Trax,2017,https://www.caranddriver.com/chevrolet/trax/specs
+Chevrolet,Volt,2017,https://www.caranddriver.com/chevrolet/volt/specs
+Chrysler,200,2017,https://www.caranddriver.com/chrysler/200/specs
+Chrysler,300,2017,https://www.caranddriver.com/chrysler/300/specs
+Chrysler,300 SRT,2014,https://www.caranddriver.com/chrysler/300-srt/specs
+Chrysler,Airflow,2025,https://www.caranddriver.com/chrysler/airflow/specs
+Chrysler,Aspen,2009,https://www.caranddriver.com/chrysler/aspen/specs
+Chrysler,Halcyon,2028,https://www.caranddriver.com/chrysler/halcyon/specs
+Chrysler,Pacifica,2017,https://www.caranddriver.com/chrysler/pacifica/specs
+Chrysler,PT Cruiser,2010,https://www.caranddriver.com/chrysler/pt-cruiser/specs
+Chrysler,Sebring,2010,https://www.caranddriver.com/chrysler/sebring/specs
+Chrysler,Town & Country,2016,https://www.caranddriver.com/chrysler/town-&-country/specs
+Chrysler,Voyager,2020,https://www.caranddriver.com/chrysler/voyager/specs
+Dodge,Avenger,2014,https://www.caranddriver.com/dodge/avenger/specs
+Dodge,Caliber,2012,https://www.caranddriver.com/dodge/caliber/specs
+Dodge,Challenger,2017,https://www.caranddriver.com/dodge/challenger/specs
+Dodge,Challenger SRT / SRT Hellcat,2017,https://www.caranddriver.com/dodge/challenger-srt-/-srt-hellcat/specs
+Dodge,Challenger SRT Demon,2018,https://www.caranddriver.com/dodge/challenger-srt-demon/specs
+Dodge,Charger,2017,https://www.caranddriver.com/dodge/charger/specs
+Dodge,Charger Daytona EV,2024,https://www.caranddriver.com/dodge/charger-daytona-ev/specs
+Dodge,Charger SRT,2017,https://www.caranddriver.com/dodge/charger-srt/specs
+Dodge,Dart,2016,https://www.caranddriver.com/dodge/dart/specs
+Dodge,Durango,2017,https://www.caranddriver.com/dodge/durango/specs
+Dodge,Durango SRT 392,2018,https://www.caranddriver.com/dodge/durango-srt-392/specs
+Dodge,Durango SRT Hellcat,2021,https://www.caranddriver.com/dodge/durango-srt-hellcat/specs
+Dodge,Grand Caravan,2017,https://www.caranddriver.com/dodge/grand-caravan/specs
+Dodge,Hornet,2023,https://www.caranddriver.com/dodge/hornet/specs
+Dodge,Hornet Hybrid,2024,https://www.caranddriver.com/dodge/hornet-hybrid/specs
+Dodge,Journey,2017,https://www.caranddriver.com/dodge/journey/specs
+Dodge,Magnum,2008,https://www.caranddriver.com/dodge/magnum/specs
+Dodge,Nitro,2011,https://www.caranddriver.com/dodge/nitro/specs
+Dodge,Viper,2017,https://www.caranddriver.com/dodge/viper/specs
+Ferrari,296,2022,https://www.caranddriver.com/ferrari/296/specs
+Ferrari,488 Pista,2019,https://www.caranddriver.com/ferrari/488-pista/specs
+Ferrari,599GTB Fiorano,2012,https://www.caranddriver.com/ferrari/599gtb-fiorano/specs
+Ferrari,812,2018,https://www.caranddriver.com/ferrari/812/specs
+Ferrari,California T,2017,https://www.caranddriver.com/ferrari/california-t/specs
+Ferrari,Daytona SP3,2023,https://www.caranddriver.com/ferrari/daytona-sp3/specs
+Ferrari,F8 Tributo / Spider,2020,https://www.caranddriver.com/ferrari/f8-tributo-/-spider/specs
+Ferrari,F12berlinetta,2016,https://www.caranddriver.com/ferrari/f12berlinetta/specs
+Ferrari,F430,2010,https://www.caranddriver.com/ferrari/f430/specs
+Ferrari,FF,2016,https://www.caranddriver.com/ferrari/ff/specs
+Ferrari,GTC4Lusso,2018,https://www.caranddriver.com/ferrari/gtc4lusso/specs
+Ferrari,LaFerrari,2015,https://www.caranddriver.com/ferrari/laferrari/specs
+Ferrari,Portofino,2019,https://www.caranddriver.com/ferrari/portofino/specs
+Ferrari,Purosangue,2024,https://www.caranddriver.com/ferrari/purosangue/specs
+Ferrari,Roma,2021,https://www.caranddriver.com/ferrari/roma/specs
+Ferrari,SF90 Stradale,2020,https://www.caranddriver.com/ferrari/sf90-stradale/specs
+Fiat,124 Spider,2017,https://www.caranddriver.com/fiat/124-spider/specs
+Fiat,500,2017,https://www.caranddriver.com/fiat/500/specs
+Fiat,500 / 500C Abarth,2019,https://www.caranddriver.com/fiat/500-/-500c-abarth/specs
+Fiat,500e,2019,https://www.caranddriver.com/fiat/500e/specs
+Fiat,500L,2017,https://www.caranddriver.com/fiat/500l/specs
+Fiat,500X,2017,https://www.caranddriver.com/fiat/500x/specs
+Fisker,Alaska,2025,https://www.caranddriver.com/fisker/alaska/specs
+Fisker,Karma,2013,https://www.caranddriver.com/fisker/karma/specs
+Fisker,Ocean,2023,https://www.caranddriver.com/fisker/ocean/specs
+Fisker,Pear,2026,https://www.caranddriver.com/fisker/pear/specs
+Fisker,Rōnin,2026,https://www.caranddriver.com/fisker/rōnin/specs
+Ford,Bronco,2021,https://www.caranddriver.com/ford/bronco/specs
+Ford,Bronco Raptor,2022,https://www.caranddriver.com/ford/bronco-raptor/specs
+Ford,Bronco Sport,2021,https://www.caranddriver.com/ford/bronco-sport/specs
+Ford,C-Max,2017,https://www.caranddriver.com/ford/c-max/specs
+Ford,E-Transit,2022,https://www.caranddriver.com/ford/e-transit/specs
+Ford,EcoSport,2018,https://www.caranddriver.com/ford/ecosport/specs
+Ford,Edge,2017,https://www.caranddriver.com/ford/edge/specs
+Ford,Escape,2017,https://www.caranddriver.com/ford/escape/specs
+Ford,Expedition / Expedition Max,2017,https://www.caranddriver.com/ford/expedition-/-expedition-max/specs
+Ford,Explorer,2017,https://www.caranddriver.com/ford/explorer/specs
+Ford,F-150,2017,https://www.caranddriver.com/ford/f-150/specs
+Ford,F-150 Lightning,2022,https://www.caranddriver.com/ford/f-150-lightning/specs
+Ford,F-150 Raptor,2017,https://www.caranddriver.com/ford/f-150-raptor/specs
+Ford,Fiesta,2019,https://www.caranddriver.com/ford/fiesta/specs
+Ford,Fiesta ST,2017,https://www.caranddriver.com/ford/fiesta-st/specs
+Ford,Flex,2017,https://www.caranddriver.com/ford/flex/specs
+Ford,Focus,2017,https://www.caranddriver.com/ford/focus/specs
+Ford,Focus Active,2020,https://www.caranddriver.com/ford/focus-active/specs
+Ford,Focus Electric,2018,https://www.caranddriver.com/ford/focus-electric/specs
+Ford,Focus RS,2017,https://www.caranddriver.com/ford/focus-rs/specs
+Ford,Focus ST,2018,https://www.caranddriver.com/ford/focus-st/specs
+Ford,Fusion,2017,https://www.caranddriver.com/ford/fusion/specs
+Ford,Fusion Active,2023,https://www.caranddriver.com/ford/fusion-active/specs
+Ford,GT,2017,https://www.caranddriver.com/ford/gt/specs
+Ford,Maverick,2022,https://www.caranddriver.com/ford/maverick/specs
+Ford,Mustang,2017,https://www.caranddriver.com/ford/mustang/specs
+Ford,Mustang GTD,2025,https://www.caranddriver.com/ford/mustang-gtd/specs
+Ford,Mustang Mach-E,2021,https://www.caranddriver.com/ford/mustang-mach-e/specs
+Ford,Mustang Raptor / Raptor R,2026,https://www.caranddriver.com/ford/mustang-raptor-/-raptor-r/specs
+Ford,Mustang Shelby GT350 / GT350R,2017,https://www.caranddriver.com/ford/mustang-shelby-gt350-/-gt350r/specs
+Ford,Mustang Shelby GT500,2020,https://www.caranddriver.com/ford/mustang-shelby-gt500/specs
+Ford,Puma,2020,https://www.caranddriver.com/ford/puma/specs
+Ford,Ranger,2019,https://www.caranddriver.com/ford/ranger/specs
+Ford,Ranger Raptor,2024,https://www.caranddriver.com/ford/ranger-raptor/specs
+Ford,Super Duty,2017,https://www.caranddriver.com/ford/super-duty/specs
+Ford,Taurus,2017,https://www.caranddriver.com/ford/taurus/specs
+Ford,Taurus X,2009,https://www.caranddriver.com/ford/taurus-x/specs
+Ford,Transit,2017,https://www.caranddriver.com/ford/transit/specs
+Ford,Transit Connect,2017,https://www.caranddriver.com/ford/transit-connect/specs
+Genesis,Electrified G80,2023,https://www.caranddriver.com/genesis/electrified-g80/specs
+Genesis,Electrified GV70,2023,https://www.caranddriver.com/genesis/electrified-gv70/specs
+Genesis,G70,2019,https://www.caranddriver.com/genesis/g70/specs
+Genesis,G80,2017,https://www.caranddriver.com/genesis/g80/specs
+Genesis,G90,2017,https://www.caranddriver.com/genesis/g90/specs
+Genesis,GT90,2025,https://www.caranddriver.com/genesis/gt90/specs
+Genesis,GV60,2023,https://www.caranddriver.com/genesis/gv60/specs
+Genesis,GV60 Magma,2026,https://www.caranddriver.com/genesis/gv60-magma/specs
+Genesis,GV70,2022,https://www.caranddriver.com/genesis/gv70/specs
+Genesis,GV80,2021,https://www.caranddriver.com/genesis/gv80/specs
+Genesis,GV80 Coupe,2025,https://www.caranddriver.com/genesis/gv80-coupe/specs
+Genesis,GV90,2026,https://www.caranddriver.com/genesis/gv90/specs
+GMC,Acadia,2017,https://www.caranddriver.com/gmc/acadia/specs
+GMC,Canyon,2017,https://www.caranddriver.com/gmc/canyon/specs
+GMC,Envoy,2009,https://www.caranddriver.com/gmc/envoy/specs
+GMC,Hummer EV Pickup,2022,https://www.caranddriver.com/gmc/hummer-ev-pickup/specs
+GMC,Hummer EV SUV,2024,https://www.caranddriver.com/gmc/hummer-ev-suv/specs
+GMC,Savana,2017,https://www.caranddriver.com/gmc/savana/specs
+GMC,Sierra 1500,2017,https://www.caranddriver.com/gmc/sierra-1500/specs
+GMC,Sierra 2500HD / 3500 HD,2017,https://www.caranddriver.com/gmc/sierra-2500hd-/-3500-hd/specs
+GMC,Sierra EV,2024,https://www.caranddriver.com/gmc/sierra-ev/specs
+GMC,Terrain,2017,https://www.caranddriver.com/gmc/terrain/specs
+GMC,Yukon / Yukon XL,2017,https://www.caranddriver.com/gmc/yukon-/-yukon-xl/specs
+Honda,Accord,2017,https://www.caranddriver.com/honda/accord/specs
+Honda,Civic,2017,https://www.caranddriver.com/honda/civic/specs
+Honda,Civic Si,2017,https://www.caranddriver.com/honda/civic-si/specs
+Honda,Civic Type R,2017,https://www.caranddriver.com/honda/civic-type-r/specs
+Honda,Clarity,2017,https://www.caranddriver.com/honda/clarity/specs
+Honda,CR-V,2017,https://www.caranddriver.com/honda/cr-v/specs
+Honda,CR-V Fuel Cell,2025,https://www.caranddriver.com/honda/cr-v-fuel-cell/specs
+Honda,CR-V Hybrid,2023,https://www.caranddriver.com/honda/cr-v-hybrid/specs
+Honda,CR-Z,2016,https://www.caranddriver.com/honda/cr-z/specs
+Honda,Element,2011,https://www.caranddriver.com/honda/element/specs
+Honda,FCX Clarity,2012,https://www.caranddriver.com/honda/fcx-clarity/specs
+Honda,Fit,2017,https://www.caranddriver.com/honda/fit/specs
+Honda,Fit EV,2014,https://www.caranddriver.com/honda/fit-ev/specs
+Honda,HR-V,2017,https://www.caranddriver.com/honda/hr-v/specs
+Honda,Insight,2019,https://www.caranddriver.com/honda/insight/specs
+Honda,Odyssey,2017,https://www.caranddriver.com/honda/odyssey/specs
+Honda,Passport,2019,https://www.caranddriver.com/honda/passport/specs
+Honda,Pilot,2017,https://www.caranddriver.com/honda/pilot/specs
+Honda,Prelude,2026,https://www.caranddriver.com/honda/prelude/specs
+Honda,Prologue,2024,https://www.caranddriver.com/honda/prologue/specs
+Honda,Ridgeline,2017,https://www.caranddriver.com/honda/ridgeline/specs
+Honda,S2000,2009,https://www.caranddriver.com/honda/s2000/specs
+Honda,Saloon,2027,https://www.caranddriver.com/honda/saloon/specs
+Hummer,H2,2009,https://www.caranddriver.com/hummer/h2/specs
+Hummer,H3,2010,https://www.caranddriver.com/hummer/h3/specs
+Hyundai,Accent,2017,https://www.caranddriver.com/hyundai/accent/specs
+Hyundai,Azera,2017,https://www.caranddriver.com/hyundai/azera/specs
+Hyundai,Elantra,2017,https://www.caranddriver.com/hyundai/elantra/specs
+Hyundai,Elantra GT,2017,https://www.caranddriver.com/hyundai/elantra-gt/specs
+Hyundai,Elantra N,2022,https://www.caranddriver.com/hyundai/elantra-n/specs
+Hyundai,Elantra Sport,2017,https://www.caranddriver.com/hyundai/elantra-sport/specs
+Hyundai,Elantra Touring,2012,https://www.caranddriver.com/hyundai/elantra-touring/specs
+Hyundai,Entourage,2009,https://www.caranddriver.com/hyundai/entourage/specs
+Hyundai,Equus,2016,https://www.caranddriver.com/hyundai/equus/specs
+Hyundai,Genesis,2016,https://www.caranddriver.com/hyundai/genesis/specs
+Hyundai,Genesis coupe,2016,https://www.caranddriver.com/hyundai/genesis-coupe/specs
+Hyundai,Ioniq,2017,https://www.caranddriver.com/hyundai/ioniq/specs
+Hyundai,Ioniq 5,2022,https://www.caranddriver.com/hyundai/ioniq-5/specs
+Hyundai,Ioniq 5 N,2025,https://www.caranddriver.com/hyundai/ioniq-5-n/specs
+Hyundai,Ioniq 6,2023,https://www.caranddriver.com/hyundai/ioniq-6/specs
+Hyundai,Ioniq 7,2025,https://www.caranddriver.com/hyundai/ioniq-7/specs
+Hyundai,Ioniq Electric,2020,https://www.caranddriver.com/hyundai/ioniq-electric/specs
+Hyundai,Kona,2018,https://www.caranddriver.com/hyundai/kona/specs
+Hyundai,Kona Electric,2019,https://www.caranddriver.com/hyundai/kona-electric/specs
+Hyundai,Kona N,2022,https://www.caranddriver.com/hyundai/kona-n/specs
+Hyundai,Nexo,2019,https://www.caranddriver.com/hyundai/nexo/specs
+Hyundai,Palisade,2020,https://www.caranddriver.com/hyundai/palisade/specs
+Hyundai,RM20 N,2023,https://www.caranddriver.com/hyundai/rm20-n/specs
+Hyundai,Santa Cruz,2022,https://www.caranddriver.com/hyundai/santa-cruz/specs
+Hyundai,Santa Fe,2017,https://www.caranddriver.com/hyundai/santa-fe-/specs
+Hyundai,Santa Fe Hybrid,2024,https://www.caranddriver.com/hyundai/santa-fe-hybrid/specs
+Hyundai,Santa Fe Sport,2017,https://www.caranddriver.com/hyundai/santa-fe-sport/specs
+Hyundai,Sonata,2017,https://www.caranddriver.com/hyundai/sonata/specs
+Hyundai,Tiburon,2008,https://www.caranddriver.com/hyundai/tiburon/specs
+Hyundai,Tucson,2017,https://www.caranddriver.com/hyundai/tucson/specs
+Hyundai,Tucson Fuel Cell,2016,https://www.caranddriver.com/hyundai/tucson-fuel-cell/specs
+Hyundai,Tucson Hybrid,2022,https://www.caranddriver.com/hyundai/tucson-hybrid/specs
+Hyundai,Veloster,2017,https://www.caranddriver.com/hyundai/veloster/specs
+Hyundai,Veloster N,2019,https://www.caranddriver.com/hyundai/veloster-n/specs
+Hyundai,Venue,2020,https://www.caranddriver.com/hyundai/venue/specs
+Hyundai,Veracruz,2012,https://www.caranddriver.com/hyundai/veracruz/specs
+Ineos,Grenadier,2024,https://www.caranddriver.com/ineos/grenadier/specs
+Infiniti,EX,2013,https://www.caranddriver.com/infiniti/ex/specs
+Infiniti,G,2013,https://www.caranddriver.com/infiniti/g/specs
+Infiniti,JX,2013,https://www.caranddriver.com/infiniti/jx/specs
+Infiniti,M,2013,https://www.caranddriver.com/infiniti/m/specs
+Infiniti,Q50,2017,https://www.caranddriver.com/infiniti/q50/specs
+Infiniti,Q50 Red Sport 400,2019,https://www.caranddriver.com/infiniti/q50-red-sport-400/specs
+Infiniti,Q60,2017,https://www.caranddriver.com/infiniti/q60/specs
+Infiniti,Q60 Red Sport 400,2019,https://www.caranddriver.com/infiniti/q60-red-sport-400/specs
+Infiniti,Q70,2017,https://www.caranddriver.com/infiniti/q70/specs
+Infiniti,QX,2013,https://www.caranddriver.com/infiniti/qx/specs
+Infiniti,QX30,2017,https://www.caranddriver.com/infiniti/qx30/specs
+Infiniti,QX50,2017,https://www.caranddriver.com/infiniti/qx50/specs
+Infiniti,QX55,2022,https://www.caranddriver.com/infiniti/qx55/specs
+Infiniti,QX60,2017,https://www.caranddriver.com/infiniti/qx60/specs
+Infiniti,QX65,2025,https://www.caranddriver.com/infiniti/qx65/specs
+Infiniti,QX70,2017,https://www.caranddriver.com/infiniti/qx70/specs
+Infiniti,QX80,2017,https://www.caranddriver.com/infiniti/qx80/specs
+Jaguar,E-Pace,2018,https://www.caranddriver.com/jaguar/e-pace/specs
+Jaguar,F-Pace,2017,https://www.caranddriver.com/jaguar/f-pace/specs
+Jaguar,F-Pace SVR,2019,https://www.caranddriver.com/jaguar/f-pace-svr/specs
+Jaguar,F-Type,2017,https://www.caranddriver.com/jaguar/f-type/specs
+Jaguar,F-type R,2019,https://www.caranddriver.com/jaguar/f-type-r/specs
+Jaguar,I-Pace,2019,https://www.caranddriver.com/jaguar/i-pace/specs
+Jaguar,J-Pace,2021,https://www.caranddriver.com/jaguar/j-pace/specs
+Jaguar,XE,2017,https://www.caranddriver.com/jaguar/xe/specs
+Jaguar,XF,2017,https://www.caranddriver.com/jaguar/xf/specs
+Jaguar,XF Sportbrake,2018,https://www.caranddriver.com/jaguar/xf-sportbrake/specs
+Jaguar,XJ,2017,https://www.caranddriver.com/jaguar/xj/specs
+Jaguar,XJR575,2019,https://www.caranddriver.com/jaguar/xjr575/specs
+Jaguar,XK,2015,https://www.caranddriver.com/jaguar/xk/specs
+Jaguar,XKR / XKR-S,2015,https://www.caranddriver.com/jaguar/xkr-/-xkr-s/specs
+Karma,GS-6,2021,https://www.caranddriver.com/karma/gs-6/specs
+Kia,Amanti,2009,https://www.caranddriver.com/kia/amanti/specs
+Kia,Borrego,2010,https://www.caranddriver.com/kia/borrego/specs
+Kia,Cadenza,2017,https://www.caranddriver.com/kia/cadenza/specs
+Kia,Carnival,2022,https://www.caranddriver.com/kia/carnival/specs
+Kia,Carnival Hybrid,2025,https://www.caranddriver.com/kia/carnival-hybrid/specs
+Kia,EV3,2026,https://www.caranddriver.com/kia/ev3/specs
+Kia,EV4,2026,https://www.caranddriver.com/kia/ev4/specs
+Kia,EV5,2025,https://www.caranddriver.com/kia/ev5/specs
+Kia,EV6,2022,https://www.caranddriver.com/kia/ev6/specs
+Kia,EV9,2024,https://www.caranddriver.com/kia/ev9/specs
+Kia,Forte,2017,https://www.caranddriver.com/kia/forte-/specs
+Kia,Forte Koup,2016,https://www.caranddriver.com/kia/forte-koup/specs
+Kia,K4,2025,https://www.caranddriver.com/kia/k4/specs
+Kia,K5,2021,https://www.caranddriver.com/kia/k5/specs
+Kia,K900,2017,https://www.caranddriver.com/kia/k900/specs
+Kia,Niro EV,2020,https://www.caranddriver.com/kia/niro-ev/specs
+Kia,Niro Hybrid,2017,https://www.caranddriver.com/kia/niro-hybrid/specs
+Kia,Optima,2017,https://www.caranddriver.com/kia/optima/specs
+Kia,Rio,2017,https://www.caranddriver.com/kia/rio/specs
+Kia,Rondo,2010,https://www.caranddriver.com/kia/rondo/specs
+Kia,Sedona,2017,https://www.caranddriver.com/kia/sedona/specs
+Kia,Seltos,2021,https://www.caranddriver.com/kia/seltos/specs
+Kia,Sorento,2017,https://www.caranddriver.com/kia/sorento/specs
+Kia,Soul,2017,https://www.caranddriver.com/kia/soul/specs
+Kia,Soul EV,2019,https://www.caranddriver.com/kia/soul-ev/specs
+Kia,Spectra,2009,https://www.caranddriver.com/kia/spectra/specs
+Kia,Spectra5,2009,https://www.caranddriver.com/kia/spectra5/specs
+Kia,Sportage,2017,https://www.caranddriver.com/kia/sportage/specs
+Kia,Sportage Hybrid,2023,https://www.caranddriver.com/kia/sportage-hybrid/specs
+Kia,Stinger,2018,https://www.caranddriver.com/kia/stinger/specs
+Kia,Telluride,2020,https://www.caranddriver.com/kia/telluride/specs
+Koenigsegg,Jesko,2021,https://www.caranddriver.com/koenigsegg/jesko/specs
+Koenigsegg,Regera,2019,https://www.caranddriver.com/koenigsegg/regera/specs
+Lamborghini,Aventador,2019,https://www.caranddriver.com/lamborghini/aventador/specs
+Lamborghini,Countach,2022,https://www.caranddriver.com/lamborghini/countach/specs
+Lamborghini,Gallardo,2014,https://www.caranddriver.com/lamborghini/gallardo/specs
+Lamborghini,Huracán,2019,https://www.caranddriver.com/lamborghini/huracán/specs
+Lamborghini,Lanzador,2028,https://www.caranddriver.com/lamborghini/lanzador/specs
+Lamborghini,Murcielago,2009,https://www.caranddriver.com/lamborghini/murcielago/specs
+Lamborghini,Revuelto,2024,https://www.caranddriver.com/lamborghini/revuelto/specs
+Lamborghini,Sián,2021,https://www.caranddriver.com/lamborghini/sián/specs
+Lamborghini,Urus,2019,https://www.caranddriver.com/lamborghini/urus/specs
+Land Rover,Defender,2020,https://www.caranddriver.com/land-rover/defender/specs
+Land Rover,Defender Sport,2027,https://www.caranddriver.com/land-rover/defender-sport/specs
+Land Rover,Discovery,2017,https://www.caranddriver.com/land-rover/discovery/specs
+Land Rover,Discovery Sport,2017,https://www.caranddriver.com/land-rover/discovery-sport/specs
+Land Rover,LR2,2015,https://www.caranddriver.com/land-rover/lr2/specs
+Land Rover,LR3,2009,https://www.caranddriver.com/land-rover/lr3/specs
+Land Rover,LR4,2016,https://www.caranddriver.com/land-rover/lr4/specs
+Land Rover,Range Rover,2017,https://www.caranddriver.com/land-rover/range-rover/specs
+Land Rover,Range Rover EV,2025,https://www.caranddriver.com/land-rover/range-rover-ev/specs
+Land Rover,Range Rover Evoque,2017,https://www.caranddriver.com/land-rover/range-rover-evoque/specs
+Land Rover,Range Rover Sport,2017,https://www.caranddriver.com/land-rover/range-rover-sport/specs
+Land Rover,Range Rover Sport SV,2017,https://www.caranddriver.com/land-rover/range-rover-sport-sv/specs
+Land Rover,Range Rover Supercharged,2017,https://www.caranddriver.com/land-rover/range-rover-supercharged/specs
+Land Rover,Range Rover Velar,2018,https://www.caranddriver.com/land-rover/range-rover-velar/specs
+Lexus,CT,2017,https://www.caranddriver.com/lexus/ct/specs
+Lexus,ES,2017,https://www.caranddriver.com/lexus/es/specs
+Lexus,EV Supercar,2025,https://www.caranddriver.com/lexus/ev-supercar/specs
+Lexus,GS,2017,https://www.caranddriver.com/lexus/gs/specs
+Lexus,GS F,2017,https://www.caranddriver.com/lexus/gs-f/specs
+Lexus,GX,2017,https://www.caranddriver.com/lexus/gx/specs
+Lexus,HS,2012,https://www.caranddriver.com/lexus/hs/specs
+Lexus,IS,2017,https://www.caranddriver.com/lexus/is/specs
+Lexus,IS F,2014,https://www.caranddriver.com/lexus/is-f/specs
+Lexus,LC,2018,https://www.caranddriver.com/lexus/lc/specs
+Lexus,LFA,2012,https://www.caranddriver.com/lexus/lfa/specs
+Lexus,LS,2017,https://www.caranddriver.com/lexus/ls/specs
+Lexus,LX,2017,https://www.caranddriver.com/lexus/lx/specs
+Lexus,NX,2017,https://www.caranddriver.com/lexus/nx/specs
+Lexus,RC,2017,https://www.caranddriver.com/lexus/rc/specs
+Lexus,RC F,2018,https://www.caranddriver.com/lexus/rc-f/specs
+Lexus,RX,2017,https://www.caranddriver.com/lexus/rx/specs
+Lexus,RX Hybrid,2023,https://www.caranddriver.com/lexus/rx-hybrid/specs
+Lexus,RZ,2023,https://www.caranddriver.com/lexus/rz/specs
+Lexus,SC,2010,https://www.caranddriver.com/lexus/sc/specs
+Lexus,TX,2024,https://www.caranddriver.com/lexus/tx/specs
+Lexus,TX Hybrid,2024,https://www.caranddriver.com/lexus/tx-hybrid/specs
+Lexus,TZ,2026,https://www.caranddriver.com/lexus/tz/specs
+Lexus,UX,2019,https://www.caranddriver.com/lexus/ux/specs
+Lordstown,Endurance,2023,https://www.caranddriver.com/lordstown/endurance/specs
+Lotus,Eletre,2025,https://www.caranddriver.com/lotus/eletre/specs
+Lotus,Elise,2011,https://www.caranddriver.com/lotus/elise/specs
+Lotus,Emeya,2025,https://www.caranddriver.com/lotus/emeya/specs
+Lotus,Emira,2024,https://www.caranddriver.com/lotus/emira/specs
+Lotus,Evija,2023,https://www.caranddriver.com/lotus/evija/specs
+Lotus,Evora GT,2017,https://www.caranddriver.com/lotus/evora-gt/specs
+Lotus,Exige,2011,https://www.caranddriver.com/lotus/exige/specs
+Lotus,Type 135,2028,https://www.caranddriver.com/lotus/type-135/specs
+Lucid Motors,Air,2022,https://www.caranddriver.com/lucid-motors/air/specs
+Lucid Motors,Gravity,2025,https://www.caranddriver.com/lucid-motors/gravity/specs
+Maserati,Ghibli,2017,https://www.caranddriver.com/maserati/ghibli/specs
+Maserati,GranCabrio,2024,https://www.caranddriver.com/maserati/grancabrio/specs
+Maserati,GranCabrio Folgore,2025,https://www.caranddriver.com/maserati/grancabrio-folgore/specs
+Maserati,GranTurismo,2017,https://www.caranddriver.com/maserati/granturismo/specs
+Maserati,GranTurismo Folgore,2024,https://www.caranddriver.com/maserati/granturismo-folgore/specs
+Maserati,Grecale,2023,https://www.caranddriver.com/maserati/grecale/specs
+Maserati,Grecale Folgore,2025,https://www.caranddriver.com/maserati/grecale-folgore/specs
+Maserati,Grecale Trofeo,2023,https://www.caranddriver.com/maserati/grecale-trofeo/specs
+Maserati,Levante,2017,https://www.caranddriver.com/maserati/levante/specs
+Maserati,MC20,2022,https://www.caranddriver.com/maserati/mc20/specs
+Maserati,Quattroporte,2017,https://www.caranddriver.com/maserati/quattroporte/specs
+Mercedes-AMG,A35 / A45,2020,https://www.caranddriver.com/mercedes-amg/a35-/-a45/specs
+Mercedes-AMG,C43,2017,https://www.caranddriver.com/mercedes-amg/c43/specs
+Mercedes-AMG,C63,2017,https://www.caranddriver.com/mercedes-amg/c63/specs
+Mercedes-AMG,CLA-class,2017,https://www.caranddriver.com/mercedes-amg/cla-class/specs
+Mercedes-AMG,CLE53 Coupe,2024,https://www.caranddriver.com/mercedes-amg/cle53-coupe/specs
+Mercedes-AMG,CLS53 4Matic,2019,https://www.caranddriver.com/mercedes-amg/cls53-4matic/specs
+Mercedes-AMG,CLS63 S 4Matic,2017,https://www.caranddriver.com/mercedes-amg/cls63-s-4matic/specs
+Mercedes-AMG,E53,2017,https://www.caranddriver.com/mercedes-amg/e53/specs
+Mercedes-AMG,E63 S 4Matic,2018,https://www.caranddriver.com/mercedes-amg/e63-s-4matic/specs
+Mercedes-AMG,E63 S Wagon,2019,https://www.caranddriver.com/mercedes-amg/e63-s-wagon/specs
+Mercedes-AMG,EQE,2023,https://www.caranddriver.com/mercedes-amg/eqe/specs
+Mercedes-AMG,EQE SUV,2024,https://www.caranddriver.com/mercedes-amg/eqe-suv/specs
+Mercedes-AMG,EQS,2022,https://www.caranddriver.com/mercedes-amg/eqs/specs
+Mercedes-AMG,G63,2017,https://www.caranddriver.com/mercedes-amg/g63/specs
+Mercedes-AMG,GL63,2016,https://www.caranddriver.com/mercedes-amg/gl63/specs
+Mercedes-AMG,GLA-class,2018,https://www.caranddriver.com/mercedes-amg/gla-class/specs
+Mercedes-AMG,GLB35,2021,https://www.caranddriver.com/mercedes-amg/glb35/specs
+Mercedes-AMG,GLC-Class,2017,https://www.caranddriver.com/mercedes-amg/glc-class/specs
+Mercedes-AMG,GLC-Class Coupe,2018,https://www.caranddriver.com/mercedes-amg/glc-class-coupe/specs
+Mercedes-AMG,GLE-class,2017,https://www.caranddriver.com/mercedes-amg/gle-class/specs
+Mercedes-AMG,GLE43 Coupe 4Matic / GLE63 S Coupe 4Matic,2019,https://www.caranddriver.com/mercedes-amg/gle43-coupe-4matic-/-gle63-s-coupe-4matic/specs
+Mercedes-AMG,GLS63 4Matic,2017,https://www.caranddriver.com/mercedes-amg/gls63-4matic/specs
+Mercedes-AMG,GT 4-Door,2019,https://www.caranddriver.com/mercedes-amg/gt-4-door/specs
+Mercedes-AMG,GT Coupe,2019,https://www.caranddriver.com/mercedes-amg/gt-coupe/specs
+Mercedes-AMG,GT R,2018,https://www.caranddriver.com/mercedes-amg/gt-r/specs
+Mercedes-AMG,S63,2017,https://www.caranddriver.com/mercedes-amg/s63/specs
+Mercedes-AMG,SL-Class,2019,https://www.caranddriver.com/mercedes-amg/sl-class/specs
+Mercedes-AMG,SLC43,2017,https://www.caranddriver.com/mercedes-amg/slc43/specs
+Mercedes-Benz,A-class,2019,https://www.caranddriver.com/mercedes-benz/a-class/specs
+Mercedes-Benz,B-class Electric Drive,2017,https://www.caranddriver.com/mercedes-benz/b-class-electric-drive/specs
+Mercedes-Benz,C-class,2017,https://www.caranddriver.com/mercedes-benz/c-class/specs
+Mercedes-Benz,C63 AMG,2014,https://www.caranddriver.com/mercedes-benz/c63-amg/specs
+Mercedes-Benz,CL-class,2014,https://www.caranddriver.com/mercedes-benz/cl-class/specs
+Mercedes-Benz,CL63 / CL65 AMG,2014,https://www.caranddriver.com/mercedes-benz/cl63-/-cl65-amg/specs
+Mercedes-Benz,CLA-class,2017,https://www.caranddriver.com/mercedes-benz/cla-class/specs
+Mercedes-Benz,CLA-Class EV,2026,https://www.caranddriver.com/mercedes-benz/cla-class-ev/specs
+Mercedes-Benz,CLE-class,2024,https://www.caranddriver.com/mercedes-benz/cle-class/specs
+Mercedes-Benz,CLK-class,2009,https://www.caranddriver.com/mercedes-benz/clk-class/specs
+Mercedes-Benz,CLS-class,2017,https://www.caranddriver.com/mercedes-benz/cls-class/specs
+Mercedes-Benz,E-class,2017,https://www.caranddriver.com/mercedes-benz/e-class/specs
+Mercedes-Benz,E-class Wagon,2017,https://www.caranddriver.com/mercedes-benz/e-class-wagon/specs
+Mercedes-Benz,EQA,2022,https://www.caranddriver.com/mercedes-benz/eqa/specs
+Mercedes-Benz,EQB,2022,https://www.caranddriver.com/mercedes-benz/eqb/specs
+Mercedes-Benz,EQC,2021,https://www.caranddriver.com/mercedes-benz/eqc/specs
+Mercedes-Benz,EQE,2023,https://www.caranddriver.com/mercedes-benz/eqe/specs
+Mercedes-Benz,EQE SUV,2023,https://www.caranddriver.com/mercedes-benz/eqe-suv/specs
+Mercedes-Benz,EQG,2025,https://www.caranddriver.com/mercedes-benz/eqg/specs
+Mercedes-Benz,EQS,2022,https://www.caranddriver.com/mercedes-benz/eqs/specs
+Mercedes-Benz,EQS SUV,2023,https://www.caranddriver.com/mercedes-benz/eqs-suv/specs
+Mercedes-Benz,eSprinter,2024,https://www.caranddriver.com/mercedes-benz/esprinter/specs
+Mercedes-Benz,F-cell,2013,https://www.caranddriver.com/mercedes-benz/f-cell/specs
+Mercedes-Benz,G-class,2017,https://www.caranddriver.com/mercedes-benz/g-class/specs
+Mercedes-Benz,G63 / G65 AMG,2015,https://www.caranddriver.com/mercedes-benz/g63-/-g65-amg/specs
+Mercedes-Benz,GLA-class,2017,https://www.caranddriver.com/mercedes-benz/gla-class/specs
+Mercedes-Benz,GLA45 AMG,2016,https://www.caranddriver.com/mercedes-benz/gla45-amg/specs
+Mercedes-Benz,GLB-class,2020,https://www.caranddriver.com/mercedes-benz/glb-class/specs
+Mercedes-Benz,GLC Coupe,2017,https://www.caranddriver.com/mercedes-benz/glc-coupe/specs
+Mercedes-Benz,GLC-class,2017,https://www.caranddriver.com/mercedes-benz/glc-class/specs
+Mercedes-Benz,GLC-Class Hybrid,2025,https://www.caranddriver.com/mercedes-benz/glc-class-hybrid/specs
+Mercedes-Benz,GLE-class,2017,https://www.caranddriver.com/mercedes-benz/gle-class/specs
+Mercedes-Benz,GLK-class,2015,https://www.caranddriver.com/mercedes-benz/glk-class/specs
+Mercedes-Benz,GLS-class,2017,https://www.caranddriver.com/mercedes-benz/gls-class/specs
+Mercedes-Benz,M-class,2015,https://www.caranddriver.com/mercedes-benz/m-class/specs
+Mercedes-Benz,Metris,2017,https://www.caranddriver.com/mercedes-benz/metris/specs
+Mercedes-Benz,ML63 AMG,2015,https://www.caranddriver.com/mercedes-benz/ml63-amg/specs
+Mercedes-Benz,R-class,2012,https://www.caranddriver.com/mercedes-benz/r-class/specs
+Mercedes-Benz,S-class,2017,https://www.caranddriver.com/mercedes-benz/s-class/specs
+Mercedes-Benz,S63 / S65 AMG,2015,https://www.caranddriver.com/mercedes-benz/s63-/-s65-amg/specs
+Mercedes-Benz,SL-class,2017,https://www.caranddriver.com/mercedes-benz/sl-class/specs
+Mercedes-Benz,SLC-class,2017,https://www.caranddriver.com/mercedes-benz/slc-class/specs
+Mercedes-Benz,SLK-class,2016,https://www.caranddriver.com/mercedes-benz/slk-class/specs
+Mercedes-Benz,SLK55 AMG,2015,https://www.caranddriver.com/mercedes-benz/slk55-amg/specs
+Mercedes-Benz,SLR-class,2009,https://www.caranddriver.com/mercedes-benz/slr-class/specs
+Mercedes-Benz,SLS AMG,2015,https://www.caranddriver.com/mercedes-benz/sls-amg/specs
+Mercedes-Benz,Sprinter,2017,https://www.caranddriver.com/mercedes-benz/sprinter/specs
+Mercedes-Maybach,57,2012,https://www.caranddriver.com/mercedes-maybach/57/specs
+Mercedes-Maybach,62,2012,https://www.caranddriver.com/mercedes-maybach/62/specs
+Mercedes-Maybach,EQS SUV,2024,https://www.caranddriver.com/mercedes-maybach/eqs-suv/specs
+Mercedes-Maybach,GLS-class,2021,https://www.caranddriver.com/mercedes-maybach/gls-class/specs
+Mercedes-Maybach,Landaulet,2012,https://www.caranddriver.com/mercedes-maybach/landaulet/specs
+Mercedes-Maybach,S-Class,2017,https://www.caranddriver.com/mercedes-maybach/s-class/specs
+Mercedes-Maybach,SL-Class,2025,https://www.caranddriver.com/mercedes-maybach/sl-class/specs
+Mercury,Mountaineer,2010,https://www.caranddriver.com/mercury/mountaineer/specs
+Mini,Aceman,2025,https://www.caranddriver.com/mini/aceman/specs
+Mini,Cooper Clubman / S,2017,https://www.caranddriver.com/mini/cooper-clubman-/-s/specs
+Mini,Cooper Clubman JCW,2017,https://www.caranddriver.com/mini/cooper-clubman-jcw/specs
+Mini,Cooper Coupe,2015,https://www.caranddriver.com/mini/cooper-coupe/specs
+Mini,Cooper Coupe S / JCW,2015,https://www.caranddriver.com/mini/cooper-coupe-s-/-jcw/specs
+Mini,Cooper Electric,2020,https://www.caranddriver.com/mini/cooper-electric/specs
+Mini,Cooper Hardtop / Convertible,2017,https://www.caranddriver.com/mini/cooper-hardtop-/-convertible/specs
+Mini,Cooper JCW,2017,https://www.caranddriver.com/mini/cooper-jcw/specs
+Mini,Cooper Paceman,2016,https://www.caranddriver.com/mini/cooper-paceman/specs
+Mini,Cooper Paceman S / JCW,2016,https://www.caranddriver.com/mini/cooper-paceman-s-/-jcw/specs
+Mini,Cooper Roadster,2015,https://www.caranddriver.com/mini/cooper-roadster/specs
+Mini,Cooper Roadster S / JCW,2015,https://www.caranddriver.com/mini/cooper-roadster-s-/-jcw/specs
+Mini,Countryman,2017,https://www.caranddriver.com/mini/countryman/specs
+Mini,Countryman Electric,2025,https://www.caranddriver.com/mini/countryman-electric/specs
+Mini,Countryman JCW,2018,https://www.caranddriver.com/mini/countryman-jcw/specs
+Mitsubishi,Eclipse,2012,https://www.caranddriver.com/mitsubishi/eclipse/specs
+Mitsubishi,Eclipse Cross,2018,https://www.caranddriver.com/mitsubishi/eclipse-cross/specs
+Mitsubishi,Endeavor,2011,https://www.caranddriver.com/mitsubishi/endeavor/specs
+Mitsubishi,Galant,2012,https://www.caranddriver.com/mitsubishi/galant/specs
+Mitsubishi,i-MiEV,2017,https://www.caranddriver.com/mitsubishi/i-miev/specs
+Mitsubishi,Lancer,2017,https://www.caranddriver.com/mitsubishi/lancer/specs
+Mitsubishi,Lancer Evolution,2015,https://www.caranddriver.com/mitsubishi/lancer-evolution/specs
+Mitsubishi,Mirage,2017,https://www.caranddriver.com/mitsubishi/mirage/specs
+Mitsubishi,Mirage G4,2017,https://www.caranddriver.com/mitsubishi/mirage-g4/specs
+Mitsubishi,Outlander,2017,https://www.caranddriver.com/mitsubishi/outlander/specs
+Mitsubishi,Outlander Sport,2017,https://www.caranddriver.com/mitsubishi/outlander-sport/specs
+Mitsubishi,Raider,2009,https://www.caranddriver.com/mitsubishi/raider/specs
+Nikola,Badger,2022,https://www.caranddriver.com/nikola/badger/specs
+Nissan,Altima,2017,https://www.caranddriver.com/nissan/altima/specs
+Nissan,Ariya,2023,https://www.caranddriver.com/nissan/ariya/specs
+Nissan,Armada,2017,https://www.caranddriver.com/nissan/armada/specs
+Nissan,Cube,2014,https://www.caranddriver.com/nissan/cube/specs
+Nissan,Frontier,2017,https://www.caranddriver.com/nissan/frontier/specs
+Nissan,GT-R,2017,https://www.caranddriver.com/nissan/gt-r/specs
+Nissan,Juke,2017,https://www.caranddriver.com/nissan/juke/specs
+Nissan,Juke NISMO / NISMO RS,2017,https://www.caranddriver.com/nissan/juke-nismo-/-nismo-rs/specs
+Nissan,Kicks,2018,https://www.caranddriver.com/nissan/kicks/specs
+Nissan,Leaf,2017,https://www.caranddriver.com/nissan/leaf/specs
+Nissan,Maxima,2017,https://www.caranddriver.com/nissan/maxima/specs
+Nissan,Murano,2017,https://www.caranddriver.com/nissan/murano/specs
+Nissan,NV200,2017,https://www.caranddriver.com/nissan/nv200/specs
+Nissan,NV1500 / 2500 / 3500,2017,https://www.caranddriver.com/nissan/nv1500-/-2500-/-3500/specs
+Nissan,Pathfinder,2017,https://www.caranddriver.com/nissan/pathfinder/specs
+Nissan,Rogue,2017,https://www.caranddriver.com/nissan/rogue/specs
+Nissan,Rogue Sport,2017,https://www.caranddriver.com/nissan/rogue-sport/specs
+Nissan,Sentra,2017,https://www.caranddriver.com/nissan/sentra/specs
+Nissan,Sentra NISMO,2019,https://www.caranddriver.com/nissan/sentra-nismo/specs
+Nissan,Titan,2017,https://www.caranddriver.com/nissan/titan/specs
+Nissan,Titan XD,2017,https://www.caranddriver.com/nissan/titan-xd/specs
+Nissan,Versa,2017,https://www.caranddriver.com/nissan/versa/specs
+Nissan,Versa Note,2019,https://www.caranddriver.com/nissan/versa-note/specs
+Nissan,Z,2017,https://www.caranddriver.com/nissan/z/specs
+Pagani,Huayra,2019,https://www.caranddriver.com/pagani/huayra/specs
+Pagani,Utopia,2023,https://www.caranddriver.com/pagani/utopia/specs
+Polestar,Polestar 1,2020,https://www.caranddriver.com/polestar/polestar-1/specs
+Polestar,Polestar 2,2021,https://www.caranddriver.com/polestar/polestar-2/specs
+Polestar,Polestar 3,2025,https://www.caranddriver.com/polestar/polestar-3/specs
+Polestar,Polestar 4,2025,https://www.caranddriver.com/polestar/polestar-4/specs
+Polestar,Polestar 5,2024,https://www.caranddriver.com/polestar/polestar-5/specs
+Polestar,Polestar 6,2026,https://www.caranddriver.com/polestar/polestar-6/specs
+Ram,1500,2017,https://www.caranddriver.com/ram/1500/specs
+Ram,1500 Ramcharger Hybrid,2025,https://www.caranddriver.com/ram/1500-ramcharger-hybrid/specs
+Ram,1500 REV,2025,https://www.caranddriver.com/ram/1500-rev/specs
+Ram,1500 RHO,2025,https://www.caranddriver.com/ram/1500-rho/specs
+Ram,1500 TRX,2021,https://www.caranddriver.com/ram/1500-trx/specs
+Ram,2500 / 3500,2017,https://www.caranddriver.com/ram/2500-/-3500/specs
+Ram,ProMaster,2017,https://www.caranddriver.com/ram/promaster/specs
+Ram,ProMaster City,2017,https://www.caranddriver.com/ram/promaster-city/specs
+Ram,ProMaster EV,2024,https://www.caranddriver.com/ram/promaster-ev/specs
+Ram,Rampage,2024,https://www.caranddriver.com/ram/rampage/specs
+Rimac,Nevera,2022,https://www.caranddriver.com/rimac/nevera/specs
+Jeep,Cherokee,2017,https://www.caranddriver.com/jeep/cherokee/specs
+Jeep,Commander,2010,https://www.caranddriver.com/jeep/commander/specs
+Jeep,Compass,2017,https://www.caranddriver.com/jeep/compass/specs
+Jeep,Gladiator,2020,https://www.caranddriver.com/jeep/gladiator/specs
+Jeep,Grand Cherokee,2017,https://www.caranddriver.com/jeep/grand-cherokee/specs
+Jeep,Grand Cherokee L,2021,https://www.caranddriver.com/jeep/grand-cherokee-l/specs
+Jeep,Grand Cherokee SRT,2017,https://www.caranddriver.com/jeep/grand-cherokee-srt/specs
+Jeep,Grand Cherokee Trackhawk,2018,https://www.caranddriver.com/jeep/grand-cherokee-trackhawk/specs
+Jeep,Grand Wagoneer,2022,https://www.caranddriver.com/jeep/grand-wagoneer/specs
+Jeep,Liberty,2012,https://www.caranddriver.com/jeep/liberty/specs
+Jeep,Patriot,2017,https://www.caranddriver.com/jeep/patriot/specs
+Jeep,Recon EV,2024,https://www.caranddriver.com/jeep/recon-ev/specs
+Jeep,Renegade,2017,https://www.caranddriver.com/jeep/renegade/specs
+Jeep,Wagoneer,2022,https://www.caranddriver.com/jeep/wagoneer/specs
+Jeep,Wagoneer S,2025,https://www.caranddriver.com/jeep/wagoneer-s/specs
+Jeep,Wrangler,2017,https://www.caranddriver.com/jeep/wrangler/specs
+Lincoln,Aviator,2020,https://www.caranddriver.com/lincoln/aviator/specs
+Lincoln,Continental,2017,https://www.caranddriver.com/lincoln/continental/specs
+Lincoln,Corsair,2020,https://www.caranddriver.com/lincoln/corsair/specs
+Lincoln,MKC,2017,https://www.caranddriver.com/lincoln/mkc/specs
+Lincoln,MKS,2016,https://www.caranddriver.com/lincoln/mks/specs
+Lincoln,MKT,2017,https://www.caranddriver.com/lincoln/mkt/specs
+Lincoln,MKX,2017,https://www.caranddriver.com/lincoln/mkx/specs
+Lincoln,MKZ,2017,https://www.caranddriver.com/lincoln/mkz/specs
+Lincoln,Nautilus,2019,https://www.caranddriver.com/lincoln/nautilus/specs
+Lincoln,Nautilus Hybrid,2024,https://www.caranddriver.com/lincoln/nautilus-hybrid/specs
+Lincoln,Navigator / Navigator L,2017,https://www.caranddriver.com/lincoln/navigator-/-navigator-l/specs
+Lincoln,Star,2025,https://www.caranddriver.com/lincoln/star/specs
+Lincoln,Town Car,2011,https://www.caranddriver.com/lincoln/town-car/specs
+Mazda,CX-3,2017,https://www.caranddriver.com/mazda/cx-3/specs
+Mazda,CX-5,2017,https://www.caranddriver.com/mazda/cx-5/specs
+Mazda,CX-7,2012,https://www.caranddriver.com/mazda/cx-7/specs
+Mazda,CX-9,2017,https://www.caranddriver.com/mazda/cx-9/specs
+Mazda,CX-30,2020,https://www.caranddriver.com/mazda/cx-30/specs
+Mazda,CX-50,2023,https://www.caranddriver.com/mazda/cx-50/specs
+Mazda,CX-70,2025,https://www.caranddriver.com/mazda/cx-70/specs
+Mazda,CX-70 Hybrid,2025,https://www.caranddriver.com/mazda/cx-70-hybrid/specs
+Mazda,CX-90,2024,https://www.caranddriver.com/mazda/cx-90/specs
+Mazda,CX-90 Hybrid,2024,https://www.caranddriver.com/mazda/cx-90-hybrid/specs
+Mazda,Mazda 2,2014,https://www.caranddriver.com/mazda/mazda-2/specs
+Mazda,Mazda 3,2017,https://www.caranddriver.com/mazda/mazda-3/specs
+Mazda,Mazda 5,2015,https://www.caranddriver.com/mazda/mazda-5/specs
+Mazda,Mazda 6,2017,https://www.caranddriver.com/mazda/mazda-6/specs
+Mazda,Mazdaspeed 3,2013,https://www.caranddriver.com/mazda/mazdaspeed-3/specs
+Mazda,MX-5 Miata,2017,https://www.caranddriver.com/mazda/mx-5-miata/specs
+Mazda,MX-30,2022,https://www.caranddriver.com/mazda/mx-30/specs
+Mazda,RX-8,2011,https://www.caranddriver.com/mazda/rx-8/specs
+Mazda,Tribute,2011,https://www.caranddriver.com/mazda/tribute/specs
+McLaren,12C,2014,https://www.caranddriver.com/mclaren/12c/specs
+McLaren,570S / 570GT,2017,https://www.caranddriver.com/mclaren/570s-/-570gt/specs
+McLaren,600LT,2019,https://www.caranddriver.com/mclaren/600lt/specs
+McLaren,650S,2016,https://www.caranddriver.com/mclaren/650s/specs
+McLaren,720S,2019,https://www.caranddriver.com/mclaren/720s/specs
+McLaren,750S,2024,https://www.caranddriver.com/mclaren/750s/specs
+McLaren,765LT,2021,https://www.caranddriver.com/mclaren/765lt/specs
+McLaren,Artura,2023,https://www.caranddriver.com/mclaren/artura/specs
+McLaren,Elva,2021,https://www.caranddriver.com/mclaren/elva/specs
+McLaren,GT / GTS,2020,https://www.caranddriver.com/mclaren/gt-/-gts/specs
+McLaren,MP4-12C,2012,https://www.caranddriver.com/mclaren/mp4-12c/specs
+McLaren,P1,2014,https://www.caranddriver.com/mclaren/p1/specs
+McLaren,Senna,2019,https://www.caranddriver.com/mclaren/senna/specs
+McLaren,Speedtail,2020,https://www.caranddriver.com/mclaren/speedtail/specs
+Pontiac,Grand Prix,2008,https://www.caranddriver.com/pontiac/grand-prix/specs
+Pontiac,Vibe,2010,https://www.caranddriver.com/pontiac/vibe/specs
+Porsche,718 Boxster,2017,https://www.caranddriver.com/porsche/718-boxster/specs
+Porsche,718 Cayman,2017,https://www.caranddriver.com/porsche/718-cayman/specs
+Porsche,718 EV,2025,https://www.caranddriver.com/porsche/718-ev/specs
+Porsche,911,2017,https://www.caranddriver.com/porsche/911/specs
+Porsche,911 GT2 RS,2019,https://www.caranddriver.com/porsche/911-gt2-rs/specs
+Porsche,911 GT3 / GT3 RS,2019,https://www.caranddriver.com/porsche/911-gt3-/-gt3-rs/specs
+Porsche,911 Turbo / Turbo S,2019,https://www.caranddriver.com/porsche/911-turbo-/-turbo-s/specs
+Porsche,918,2015,https://www.caranddriver.com/porsche/918/specs
+Porsche,Cayenne,2017,https://www.caranddriver.com/porsche/cayenne/specs
+Porsche,Cayenne Coupe,2020,https://www.caranddriver.com/porsche/cayenne-coupe/specs
+Porsche,Cayenne Coupe Turbo / Turbo GT,2020,https://www.caranddriver.com/porsche/cayenne-coupe-turbo-/-turbo-gt/specs
+Porsche,Cayenne EV,2026,https://www.caranddriver.com/porsche/cayenne-ev/specs
+Porsche,Cayenne Turbo,2017,https://www.caranddriver.com/porsche/cayenne-turbo/specs
+Porsche,Macan,2017,https://www.caranddriver.com/porsche/macan/specs
+Porsche,Macan EV,2024,https://www.caranddriver.com/porsche/macan-ev/specs
+Porsche,Macan GTS,2017,https://www.caranddriver.com/porsche/macan-gts/specs
+Porsche,Macan Turbo,2017,https://www.caranddriver.com/porsche/macan-turbo/specs
+Porsche,Panamera,2017,https://www.caranddriver.com/porsche/panamera/specs
+Porsche,Panamera Sport Turismo,2018,https://www.caranddriver.com/porsche/panamera-sport-turismo/specs
+Porsche,Panamera Turbo / Turbo S,2017,https://www.caranddriver.com/porsche/panamera-turbo-/-turbo-s/specs
+Porsche,Taycan,2020,https://www.caranddriver.com/porsche/taycan/specs
+Porsche,Taycan Cross Turismo,2021,https://www.caranddriver.com/porsche/taycan-cross-turismo/specs
+Rivian,Commercial Van,2024,https://www.caranddriver.com/rivian/commercial-van/specs
+Rivian,R1S,2022,https://www.caranddriver.com/rivian/r1s/specs
+Rivian,R1T,2022,https://www.caranddriver.com/rivian/r1t/specs
+Rivian,R2,2026,https://www.caranddriver.com/rivian/r2/specs
+Rivian,R3,2027,https://www.caranddriver.com/rivian/r3/specs
+Rolls-Royce,Cullinan,2019,https://www.caranddriver.com/rolls-royce/cullinan/specs
+Rolls-Royce,Dawn,2019,https://www.caranddriver.com/rolls-royce/dawn/specs
+Rolls-Royce,Ghost,2020,https://www.caranddriver.com/rolls-royce/ghost/specs
+Rolls-Royce,Ghost Series II,2019,https://www.caranddriver.com/rolls-royce/ghost-series-ii/specs
+Rolls-Royce,Phantom,2019,https://www.caranddriver.com/rolls-royce/phantom/specs
+Rolls-Royce,Spectre,2024,https://www.caranddriver.com/rolls-royce/spectre/specs
+Rolls-Royce,Wraith,2019,https://www.caranddriver.com/rolls-royce/wraith/specs
+Saab,9-3,2012,https://www.caranddriver.com/saab/9-3/specs
+Saab,9-5,2011,https://www.caranddriver.com/saab/9-5/specs
+Saab,9-7X,2009,https://www.caranddriver.com/saab/9-7x/specs
+Saturn,Aura,2009,https://www.caranddriver.com/saturn/aura/specs
+Saturn,Outlook,2009,https://www.caranddriver.com/saturn/outlook/specs
+Saturn,Sky,2009,https://www.caranddriver.com/saturn/sky/specs
+Saturn,Vue,2009,https://www.caranddriver.com/saturn/vue/specs
+Scion,FR-S,2016,https://www.caranddriver.com/scion/fr-s/specs
+Scion,iA,2016,https://www.caranddriver.com/scion/ia/specs
+Scion,iM,2016,https://www.caranddriver.com/scion/im/specs
+Scion,tC,2016,https://www.caranddriver.com/scion/tc/specs
+Scion,xB,2015,https://www.caranddriver.com/scion/xb/specs
+Scion,xD,2014,https://www.caranddriver.com/scion/xd/specs
+Scout,Pickup,2026,https://www.caranddriver.com/scout/pickup/specs
+Scout,SUV,2026,https://www.caranddriver.com/scout/suv/specs
+Smart,EQ Fortwo,2018,https://www.caranddriver.com/smart/eq-fortwo/specs
+Smart,Fortwo,2017,https://www.caranddriver.com/smart/fortwo/specs
+Spyker,C8,2017,https://www.caranddriver.com/spyker/c8/specs
+Subaru,Ascent,2019,https://www.caranddriver.com/subaru/ascent/specs
+Subaru,BRZ,2017,https://www.caranddriver.com/subaru/brz/specs
+Subaru,Crosstrek,2017,https://www.caranddriver.com/subaru/crosstrek/specs
+Subaru,Forester,2017,https://www.caranddriver.com/subaru/forester/specs
+Subaru,Impreza,2017,https://www.caranddriver.com/subaru/impreza/specs
+Subaru,Legacy,2017,https://www.caranddriver.com/subaru/legacy/specs
+Subaru,Outback,2017,https://www.caranddriver.com/subaru/outback/specs
+Subaru,Solterra,2023,https://www.caranddriver.com/subaru/solterra/specs
+Subaru,Tribeca,2014,https://www.caranddriver.com/subaru/tribeca/specs
+Subaru,WRX,2017,https://www.caranddriver.com/subaru/wrx/specs
+Subaru,WRX STI,2017,https://www.caranddriver.com/subaru/wrx-sti/specs
+Suzuki,Equator,2012,https://www.caranddriver.com/suzuki/equator/specs
+Suzuki,Forenza,2008,https://www.caranddriver.com/suzuki/forenza/specs
+Suzuki,Grand Vitara,2013,https://www.caranddriver.com/suzuki/grand-vitara/specs
+Suzuki,Kizashi,2013,https://www.caranddriver.com/suzuki/kizashi/specs
+Tesla,Cybertruck,2024,https://www.caranddriver.com/tesla/cybertruck/specs
+Tesla,Model 3,2017,https://www.caranddriver.com/tesla/model-3/specs
+Tesla,Model S,2017,https://www.caranddriver.com/tesla/model-s/specs
+Tesla,Model X,2017,https://www.caranddriver.com/tesla/model-x/specs
+Tesla,Model Y,2020,https://www.caranddriver.com/tesla/model-y/specs
+Tesla,Roadster,2026,https://www.caranddriver.com/tesla/roadster/specs
+Toyota,4Runner,2017,https://www.caranddriver.com/toyota/4runner/specs
+Toyota,4Runner Hybrid,2025,https://www.caranddriver.com/toyota/4runner-hybrid/specs
+Toyota,Avalon,2017,https://www.caranddriver.com/toyota/avalon/specs
+Toyota,bZ3X,2025,https://www.caranddriver.com/toyota/bz3x/specs
+Toyota,bZ4X,2023,https://www.caranddriver.com/toyota/bz4x/specs
+Toyota,bZ5X,2026,https://www.caranddriver.com/toyota/bz5x/specs
+Toyota,C-HR,2018,https://www.caranddriver.com/toyota/c-hr/specs
+Toyota,Camry,2017,https://www.caranddriver.com/toyota/camry/specs
+Toyota,Camry Solara,2008,https://www.caranddriver.com/toyota/camry-solara/specs
+Toyota,Compact Cruiser,2026,https://www.caranddriver.com/toyota/compact-cruiser/specs
+Toyota,Corolla,2017,https://www.caranddriver.com/toyota/corolla/specs
+Toyota,Corolla Cross,2022,https://www.caranddriver.com/toyota/corolla-cross/specs
+Toyota,Corolla Cross Hybrid,2023,https://www.caranddriver.com/toyota/corolla-cross-hybrid/specs
+Toyota,Corolla iM,2017,https://www.caranddriver.com/toyota/corolla-im/specs
+Toyota,Corolla Pickup,2027,https://www.caranddriver.com/toyota/corolla-pickup/specs
+Toyota,Crown,2023,https://www.caranddriver.com/toyota/crown/specs
+Toyota,Crown Signia,2025,https://www.caranddriver.com/toyota/crown-signia/specs
+Toyota,GR Corolla,2023,https://www.caranddriver.com/toyota/gr-corolla/specs
+Toyota,GR Supra,2020,https://www.caranddriver.com/toyota/gr-supra/specs
+Toyota,GR86,2017,https://www.caranddriver.com/toyota/gr86/specs
+Toyota,Grand Highlander,2024,https://www.caranddriver.com/toyota/grand-highlander/specs
+Toyota,Grand Highlander Hybrid,2024,https://www.caranddriver.com/toyota/grand-highlander-hybrid/specs
+Toyota,Highlander,2017,https://www.caranddriver.com/toyota/highlander/specs
+Toyota,Land Cruiser,2017,https://www.caranddriver.com/toyota/land-cruiser/specs
+Toyota,Matrix,2013,https://www.caranddriver.com/toyota/matrix/specs
+Toyota,Mirai,2017,https://www.caranddriver.com/toyota/mirai/specs
+Toyota,Prius,2017,https://www.caranddriver.com/toyota/prius/specs
+Toyota,Prius C,2018,https://www.caranddriver.com/toyota/prius-c/specs
+Toyota,Prius Prime,2017,https://www.caranddriver.com/toyota/prius-prime/specs
+Toyota,Prius V,2019,https://www.caranddriver.com/toyota/prius-v/specs
+Toyota,RAV4,2017,https://www.caranddriver.com/toyota/rav4/specs
+Toyota,RAV4 Hybrid,2019,https://www.caranddriver.com/toyota/rav4-hybrid/specs
+Toyota,Sequoia,2017,https://www.caranddriver.com/toyota/sequoia/specs
+Toyota,Sienna,2017,https://www.caranddriver.com/toyota/sienna/specs
+Toyota,Tacoma,2017,https://www.caranddriver.com/toyota/tacoma/specs
+Toyota,Tacoma Electric,2026,https://www.caranddriver.com/toyota/tacoma-electric/specs
+Toyota,Tacoma Hybrid,2024,https://www.caranddriver.com/toyota/tacoma-hybrid/specs
+Toyota,Tundra,2017,https://www.caranddriver.com/toyota/tundra/specs
+Toyota,Tundra Hybrid,2022,https://www.caranddriver.com/toyota/tundra-hybrid/specs
+Toyota,Venza,2015,https://www.caranddriver.com/toyota/venza/specs
+Toyota,Yaris,2017,https://www.caranddriver.com/toyota/yaris/specs
+Toyota,Yaris iA,2018,https://www.caranddriver.com/toyota/yaris-ia/specs
+VinFast,VF Wild,2026,https://www.caranddriver.com/vinfast/vf-wild/specs
+VinFast,VF3,2026,https://www.caranddriver.com/vinfast/vf3/specs
+VinFast,VF6,2024,https://www.caranddriver.com/vinfast/vf6/specs
+VinFast,VF7,2024,https://www.caranddriver.com/vinfast/vf7/specs
+VinFast,VF8,2023,https://www.caranddriver.com/vinfast/vf8/specs
+VinFast,VF9,2024,https://www.caranddriver.com/vinfast/vf9/specs
+Volkswagen,Arteon,2019,https://www.caranddriver.com/volkswagen/arteon/specs
+Volkswagen,Atlas,2018,https://www.caranddriver.com/volkswagen/atlas/specs
+Volkswagen,Atlas Cross Sport,2020,https://www.caranddriver.com/volkswagen/atlas-cross-sport/specs
+Volkswagen,Beetle,2017,https://www.caranddriver.com/volkswagen/beetle/specs
+Volkswagen,CC,2017,https://www.caranddriver.com/volkswagen/cc/specs
+Volkswagen,e-Golf,2017,https://www.caranddriver.com/volkswagen/e-golf/specs
+Volkswagen,Eos,2016,https://www.caranddriver.com/volkswagen/eos/specs
+Volkswagen,Golf,2017,https://www.caranddriver.com/volkswagen/golf/specs
+Volkswagen,Golf Alltrack,2018,https://www.caranddriver.com/volkswagen/golf-alltrack/specs
+Volkswagen,Golf GTI,2017,https://www.caranddriver.com/volkswagen/golf-gti/specs
+Volkswagen,Golf R,2017,https://www.caranddriver.com/volkswagen/golf-r/specs
+Volkswagen,Golf SportWagen,2017,https://www.caranddriver.com/volkswagen/golf-sportwagen/specs
+Volkswagen,ID.4,2021,https://www.caranddriver.com/volkswagen/id.4/specs
+Volkswagen,ID.7,2025,https://www.caranddriver.com/volkswagen/id.7/specs
+Volkswagen,ID.8,2026,https://www.caranddriver.com/volkswagen/id.8/specs
+Volkswagen,ID.Buzz,2025,https://www.caranddriver.com/volkswagen/id.buzz/specs
+Volkswagen,Jetta,2017,https://www.caranddriver.com/volkswagen/jetta/specs
+Volkswagen,Jetta GLI,2017,https://www.caranddriver.com/volkswagen/jetta-gli/specs
+Volkswagen,New Beetle,2010,https://www.caranddriver.com/volkswagen/new-beetle/specs
+Volkswagen,Passat,2017,https://www.caranddriver.com/volkswagen/passat/specs
+Volkswagen,Rabbit,2009,https://www.caranddriver.com/volkswagen/rabbit/specs
+Volkswagen,Routan,2012,https://www.caranddriver.com/volkswagen/routan/specs
+Volkswagen,Taos,2022,https://www.caranddriver.com/volkswagen/taos/specs
+Volkswagen,Tiguan,2017,https://www.caranddriver.com/volkswagen/tiguan/specs
+Volkswagen,Touareg,2017,https://www.caranddriver.com/volkswagen/touareg/specs
+Volvo,C30,2013,https://www.caranddriver.com/volvo/c30/specs
+Volvo,C70,2013,https://www.caranddriver.com/volvo/c70/specs
+Volvo,EC40,2022,https://www.caranddriver.com/volvo/ec40/specs
+Volvo,ES90,2026,https://www.caranddriver.com/volvo/es90/specs
+Volvo,EX30,2025,https://www.caranddriver.com/volvo/ex30/specs
+Volvo,EX40,2021,https://www.caranddriver.com/volvo/ex40/specs
+Volvo,EX90,2025,https://www.caranddriver.com/volvo/ex90/specs
+Volvo,S40,2011,https://www.caranddriver.com/volvo/s40/specs
+Volvo,S60,2017,https://www.caranddriver.com/volvo/s60/specs
+Volvo,S80,2016,https://www.caranddriver.com/volvo/s80/specs
+Volvo,S90,2017,https://www.caranddriver.com/volvo/s90/specs
+Volvo,V50,2011,https://www.caranddriver.com/volvo/v50/specs
+Volvo,V60 / V60 Cross Country,2017,https://www.caranddriver.com/volvo/v60-/-v60-cross-country/specs
+Volvo,V70,2010,https://www.caranddriver.com/volvo/v70/specs
+Volvo,V90,2018,https://www.caranddriver.com/volvo/v90/specs
+Volvo,V90 Cross Country,2017,https://www.caranddriver.com/volvo/v90-cross-country/specs
+Volvo,XC40,2019,https://www.caranddriver.com/volvo/xc40/specs
+Volvo,XC60,2017,https://www.caranddriver.com/volvo/xc60/specs
+Volvo,XC70,2016,https://www.caranddriver.com/volvo/xc70/specs
+Volvo,XC90,2017,https://www.caranddriver.com/volvo/xc90/specs
