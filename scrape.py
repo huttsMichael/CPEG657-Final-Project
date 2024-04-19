@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from fake_useragent import UserAgent
+import time
 
 def fetch_vehicle_options_selenium():
     driver = uc.Chrome()
@@ -42,6 +43,8 @@ def fetch_vehicle_options_selenium():
             else:
                 print("Not selecting this option")
 
+        time.sleep(1)
+
         print("Waiting for the 'Vehicle Model' dropdown to appear...")
         WebDriverWait(driver, 20).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Model']"))
@@ -57,6 +60,8 @@ def fetch_vehicle_options_selenium():
                 # print(f"Model '{model_option.text}' selected.")
                 break
 
+        time.sleep(1)
+
         print("Waiting for the 'Vehicle Year' dropdown to appear...")
         WebDriverWait(driver, 20).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Year']"))
@@ -70,6 +75,16 @@ def fetch_vehicle_options_selenium():
                 year_option.click()
                 # print(f"Year '{year_option.text}' selected.")
                 break
+
+        # print("Locating and clicking the 'Go' button...")
+        # go_button = WebDriverWait(driver, 20).until(
+        #     EC.element_to_be_clickable((By.CSS_SELECTOR, "button.css-1ajmkbd.e1ketqus1"))
+        # )
+        # go_button.click()
+        # print("'Go' button clicked.")
+
+        # Stay on the page to inspect
+        # time.sleep(100)
 
     except (NoSuchElementException, TimeoutException) as e:
         print("An error occurred:", e)
