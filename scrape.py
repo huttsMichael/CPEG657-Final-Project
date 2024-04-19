@@ -25,9 +25,12 @@ def fetch_vehicle_options_selenium():
         )
         make_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Make']")
         print("'Vehicle Make' dropdown is now visible.")
-        acura_option = make_select.find_element(By.CSS_SELECTOR, "option[value='acura']")
-        acura_option.click()
-        print("Acura selected.")
+        make_options = make_select.find_elements(By.TAG_NAME, "option")
+        for make_option in make_options:
+            if make_option.get_attribute("value") and make_option.get_attribute("value") != "0":
+                make_option.click()
+                print(f"Make '{make_option.text}' selected.")
+                break
 
         print("Waiting for the 'Vehicle Model' dropdown to appear...")
         WebDriverWait(driver, 20).until(
@@ -35,18 +38,24 @@ def fetch_vehicle_options_selenium():
         )
         model_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Model']")
         print("'Vehicle Model' dropdown is now visible.")
-
         model_options = model_select.find_elements(By.TAG_NAME, "option")
-        print(f"Total options found in 'Vehicle Model' dropdown: {len(model_options)}")
-        for option in model_options:
-            print(f"Model Option: {option.text} Value: {option.get_attribute('value')}")
+        for model_option in model_options:
+            if model_option.get_attribute("value") and model_option.get_attribute("value") != "0":
+                model_option.click()
+                print(f"Model '{model_option.text}' selected.")
+                break
 
-        # Skip the default option and select the first valid model
-        for option in model_options:
-            if option.get_attribute("value") != "0":  # Assuming "0" is the value for "Select Model"
-                print(f"Selecting model: {option.text}")
-                option.click()
-                print(f"Model '{option.text}' selected.")
+        print("Waiting for the 'Vehicle Year' dropdown to appear...")
+        WebDriverWait(driver, 20).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Year']"))
+        )
+        year_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Year']")
+        print("'Vehicle Year' dropdown is now visible.")
+        year_options = year_select.find_elements(By.TAG_NAME, "option")
+        for year_option in year_options:
+            if year_option.get_attribute("value") and year_option.get_attribute("value") != "0":
+                year_option.click()
+                print(f"Year '{year_option.text}' selected.")
                 break
 
     except (NoSuchElementException, TimeoutException) as e:
