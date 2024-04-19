@@ -10,8 +10,6 @@ def fetch_vehicle_options_selenium():
     driver = uc.Chrome()
     ua = UserAgent()
     user_agent = ua.random
-
-    print(user_agent)
     options = driver.options
     options.add_argument(f'--user-agent={user_agent}')
 
@@ -32,59 +30,36 @@ def fetch_vehicle_options_selenium():
             EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Make']"))
         )
         make_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Make']")
-        print("'Vehicle Make' dropdown is now visible.")
-        make_options = make_select.find_elements(By.TAG_NAME, "option")
-        for make_option in make_options:
-            if make_option.get_attribute("value") and make_option.get_attribute("value") != "0":
-                print(f"Clicking vehicle make {make_option.text}")
-                make_option.click()
-                # print(f"Make '{make_option.text}' selected.")
-                break
-            else:
-                print("Not selecting this option")
+        makes = [(option.text, option.get_attribute("value")) for option in make_select.find_elements(By.TAG_NAME, "option") if option.get_attribute("value") != "0"]
 
-        time.sleep(1)
+        for make_name, make_value in makes:
+            print(f"Preparing to select make: {make_name}")
+            # Find and click the option again to avoid stale reference
+            make_option = make_select.find_element(By.CSS_SELECTOR, f"option[value='{make_value}']")
+            make_option.click()
+            print(f"Make '{make_name}' selected.")
 
-        print("Waiting for the 'Vehicle Model' dropdown to appear...")
-        WebDriverWait(driver, 20).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Model']"))
-        )
-        model_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Model']")
-        print(f"'Vehicle Model' dropdown is now visible.")
-        model_options = model_select.find_elements(By.TAG_NAME, "option")
-        print(f"model_options: {model_options}")
-        for model_option in model_options:
-            if model_option.get_attribute("value") and model_option.get_attribute("value") != "0":
-                print(f"Clicking vehicle model {model_option.text}")
+            time.sleep(1)  # Allow time for the model dropdown to update
+
+            model_select = WebDriverWait(driver, 20).until(
+                EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Model']"))
+            )
+            models = [(option.text, option.get_attribute("value")) for option in model_select.find_elements(By.TAG_NAME, "option") if option.get_attribute("value") != "0"]
+
+            for model_name, model_value in models:
+                model_option = model_select.find_element(By.CSS_SELECTOR, f"option[value='{model_value}']")
                 model_option.click()
-                # print(f"Model '{model_option.text}' selected.")
-                break
+                print(f"Model '{model_name}' selected.")
 
-        time.sleep(1)
+                time.sleep(1)  # Allow time for the year dropdown to update
 
-        print("Waiting for the 'Vehicle Year' dropdown to appear...")
-        WebDriverWait(driver, 20).until(
-            EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Year']"))
-        )
-        year_select = driver.find_element(By.CSS_SELECTOR, "select[aria-label='Vehicle Year']")
-        print("'Vehicle Year' dropdown is now visible.")
-        year_options = year_select.find_elements(By.TAG_NAME, "option")
-        for year_option in year_options:
-            if year_option.get_attribute("value") and year_option.get_attribute("value") != "0":
-                print(f"Clicking vehicle year {year_option.text}")
-                year_option.click()
-                # print(f"Year '{year_option.text}' selected.")
-                break
+                year_select = WebDriverWait(driver, 20).until(
+                    EC.visibility_of_element_located((By.CSS_SELECTOR, "select[aria-label='Vehicle Year']"))
+                )
+                years = [option.text for option in year_select.find_elements(By.TAG_NAME, "option") if option.get_attribute("value") != "0"]
 
-        # print("Locating and clicking the 'Go' button...")
-        # go_button = WebDriverWait(driver, 20).until(
-        #     EC.element_to_be_clickable((By.CSS_SELECTOR, "button.css-1ajmkbd.e1ketqus1"))
-        # )
-        # go_button.click()
-        # print("'Go' button clicked.")
-
-        # Stay on the page to inspect
-        # time.sleep(100)
+                for year in years:
+                    print(f"Year '{year}' selected with Make '{make_name}' and Model '{model_name}'.")
 
     except (NoSuchElementException, TimeoutException) as e:
         print("An error occurred:", e)
