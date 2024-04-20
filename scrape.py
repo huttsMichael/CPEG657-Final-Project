@@ -102,48 +102,41 @@ def collect_vehicle_urls(driver):
         return vehicle_urls
 
 def extract_vehicle_specs(driver, url):
+    print(f"Attempting to load page: {url}")
     driver.get(url)
-    print("Page loaded at:", url)
-    vehicle_specs = {}
+    try:
+        # Check for the 404 error message
+        error_check = driver.find_elements(By.CSS_SELECTOR, "h2.css-1emyy0d")
+        if error_check and "Oops! We don't have the page you're looking for." in error_check[0].text:
+            print(f"404 Error Page Detected at {url}. Skipping...")
+            return None
+    except Exception as e:
+        print(f"Error checking for 404: {e}")
 
     try:
-        WebDriverWait(driver, 20).until(
+        WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, ".specs-body-content"))
         )
-        print("Specs section found.")
-
         spec_categories = driver.find_elements(By.CSS_SELECTOR, 'div[data-spec="vehicle"]')
         print(f"Found {len(spec_categories)} specification categories.")
+        vehicle_specs = {}
 
         for category in spec_categories:
-            category_name = category.find_element(By.CSS_SELECTOR, 'h3').text
-            print(f"Extracting data for category: {category_name}")
-            category_list = []  # List to store non-key-value data
+            category_name = category.find_element(By.CSS_SELECTOR, "h3").text
+            items = category.find_elements(By.CSS_SELECTOR, ".css-9dhox.etxmilo0")
+            for item in items:
+                data = item.text.split(':')
+                if len(data) == 2:
+                    vehicle_specs[data[0].strip()] = data[1].strip()
+            print(f"Extracted data for category: {category_name}")
 
-            spec_items = category.find_elements(By.CSS_SELECTOR, '.css-9dhox.etxmilo0')
-            print(f"Found {len(spec_items)} items in category '{category_name}'.")
-
-            for item in spec_items:
-                try:
-                    text = item.text.strip()
-                    if ':' in text:
-                        key, value = text.split(':', 1)
-                        vehicle_specs[key.strip()] = value.strip()
-                        print(f"Extracted {key.strip()}: {value.strip()}")
-                    else:
-                        category_list.append(text)
-                        print(f"Added to list for '{category_name}': {text}")
-                except Exception as e:
-                    print(f"Failed to extract data from item in category '{category_name}':", e)
-
-            if category_list:  # If there's non-key-value data, add it under a generic key
-                vehicle_specs[f"{category_name}_general_info"] = category_list
-
-        print("Data extracted for", url, ":", vehicle_specs)
-    except (NoSuchElementException, TimeoutException) as e:
-        print("An error occurred while extracting data from", url, ":", e)
-
-    return vehicle_specs
+        return vehicle_specs
+    except TimeoutException:
+        print(f"Timeout occurred while trying to load specifications from {url}.")
+    except NoSuchElementException:
+        print(f"Failed to find specification elements on the page {url}.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
 def read_vehicle_urls_from_csv(file_path):
@@ -155,18 +148,24 @@ def read_vehicle_urls_from_csv(file_path):
     return urls
 
 def main():
-    print("initializing driver")
     driver = initialize_driver()
-    try:
-        print("collecting urls")
-        collect_vehicle_urls(driver)
-        vehicle_urls = read_vehicle_urls_from_csv('vehicle_specs_urls.csv')
+    csv_file = 'vehicle_specs_urls.csv'
+    if not os.path.exists(csv_file):
+        print("No URL CSV file found. Please ensure your URL list is available.")
+        return
 
-        for url in vehicle_urls:
+    urls = read_vehicle_urls_from_csv(csv_file)
+    print(f"Loaded {len(urls)} URLs to process.")
+
+    try:
+        for url in urls:
             specs = extract_vehicle_specs(driver, url)
-    except Exception as e:
-        print(e)
+            if specs:
+                print(f"Specs collected for {url}: {specs}")
+            else:
+                print(f"No specs collected for {url}.")
     finally:
+        print("hit final finally, quitting cleanly")
         driver.quit()
 
 if __name__ == "__main__":
