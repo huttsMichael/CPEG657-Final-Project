@@ -7,6 +7,8 @@ from fake_useragent import UserAgent
 import time
 import csv
 import os
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 def initialize_driver():
     driver = uc.Chrome()
@@ -16,6 +18,13 @@ def initialize_driver():
     options.add_argument(f'--user-agent={user_agent}')
 
     return driver
+
+def initialize_mongodb():
+    uri = ""
+    client = MongoClient(uri, server_api=ServerApi('1'))
+    db = client['vehicle_data']
+    collection = db['specs']
+    return collection
 
 def collect_vehicle_urls(driver):
     driver.get("https://www.caranddriver.com/acura/integra/specs")
@@ -101,11 +110,12 @@ def collect_vehicle_urls(driver):
         # driver.quit()
         return vehicle_urls
 
-def extract_vehicle_specs(driver, url):
-    print(f"Attempting to load page: {url}")
+def extract_vehicle_specs(driver, url, collection):
     driver.get(url)
+    print(f"Attempting to load page: {url}")
+    vehicle_specs = {'url': url}
+
     try:
-        # Check for the 404 error message
         error_check = driver.find_elements(By.CSS_SELECTOR, "h2.css-1emyy0d")
         if error_check and "Oops! We don't have the page you're looking for." in error_check[0].text:
             print(f"404 Error Page Detected at {url}. Skipping...")
@@ -119,7 +129,6 @@ def extract_vehicle_specs(driver, url):
         )
         spec_categories = driver.find_elements(By.CSS_SELECTOR, 'div[data-spec="vehicle"]')
         print(f"Found {len(spec_categories)} specification categories.")
-        vehicle_specs = {}
 
         for category in spec_categories:
             category_name = category.find_element(By.CSS_SELECTOR, "h3").text
@@ -130,14 +139,15 @@ def extract_vehicle_specs(driver, url):
                     vehicle_specs[data[0].strip()] = data[1].strip()
             print(f"Extracted data for category: {category_name}")
 
-        return vehicle_specs
+        collection.insert_one(vehicle_specs)
+        print("Data inserted into MongoDB for", url)
     except TimeoutException:
-        print(f"Timeout occurred while trying to load specifications from {url}.")
+        print(f"Timeout occurred while trying to load specifications from {url}. Adding delay before next request.")
+        time.sleep(60)  # Delay for 60 seconds before next request
     except NoSuchElementException:
         print(f"Failed to find specification elements on the page {url}.")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-
 
 def read_vehicle_urls_from_csv(file_path):
     urls = []
@@ -149,6 +159,7 @@ def read_vehicle_urls_from_csv(file_path):
 
 def main():
     driver = initialize_driver()
+    collection = initialize_mongodb()
     csv_file = 'vehicle_specs_urls.csv'
     if not os.path.exists(csv_file):
         print("No URL CSV file found. Please ensure your URL list is available.")
@@ -159,11 +170,8 @@ def main():
 
     try:
         for url in urls:
-            specs = extract_vehicle_specs(driver, url)
-            if specs:
-                print(f"Specs collected for {url}: {specs}")
-            else:
-                print(f"No specs collected for {url}.")
+            extract_vehicle_specs(driver, url, collection)
+            time.sleep(2)  # General delay between requests to prevent rate limiting
     finally:
         print("hit final finally, quitting cleanly")
         driver.quit()
