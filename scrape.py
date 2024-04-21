@@ -19,8 +19,12 @@ def initialize_driver():
 
     return driver
 
+def read_mongodb_uri():
+    with open('mongodb_uri.txt', 'r') as file:
+        return file.readline().strip()
+
 def initialize_mongodb():
-    uri = ""
+    uri = read_mongodb_uri()
     client = MongoClient(uri, server_api=ServerApi('1'))
     db = client['vehicle_data']
     collection = db['specs']
@@ -110,15 +114,16 @@ def collect_vehicle_urls(driver):
         # driver.quit()
         return vehicle_urls
 
-def extract_vehicle_specs(driver, url, collection):
+def extract_vehicle_specs(driver, url, collection, make, model, year):
     driver.get(url)
     print(f"Attempting to load page: {url}")
-    vehicle_specs = {'url': url}
+    vehicle_specs = {'url': url, 'make': make, 'model': model, 'year': year}
 
     try:
         error_check = driver.find_elements(By.CSS_SELECTOR, "h2.css-1emyy0d")
         if error_check and "Oops! We don't have the page you're looking for." in error_check[0].text:
             print(f"404 Error Page Detected at {url}. Skipping...")
+            time.sleep(5)
             return None
     except Exception as e:
         print(f"Error checking for 404: {e}")
@@ -139,8 +144,11 @@ def extract_vehicle_specs(driver, url, collection):
                     vehicle_specs[data[0].strip()] = data[1].strip()
             print(f"Extracted data for category: {category_name}")
 
-        collection.insert_one(vehicle_specs)
-        print("Data inserted into MongoDB for", url)
+        # Use upsert to prevent duplicates
+        query = {'url': url}
+        update = {'$set': vehicle_specs}
+        collection.update_one(query, update, upsert=True)
+        print("Data inserted or updated in MongoDB for", url)
     except TimeoutException:
         print(f"Timeout occurred while trying to load specifications from {url}. Adding delay before next request.")
         time.sleep(60)  # Delay for 60 seconds before next request
@@ -149,12 +157,13 @@ def extract_vehicle_specs(driver, url, collection):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
+
 def read_vehicle_urls_from_csv(file_path):
     urls = []
     with open(file_path, mode='r', newline='', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            urls.append(row['URL'])
+            urls.append((row['URL'], row['Make'], row['Model'], row['Year']))
     return urls
 
 def main():
@@ -165,15 +174,21 @@ def main():
         print("No URL CSV file found. Please ensure your URL list is available.")
         return
 
-    urls = read_vehicle_urls_from_csv(csv_file)
-    print(f"Loaded {len(urls)} URLs to process.")
+    vehicle_data = read_vehicle_urls_from_csv(csv_file)
+    print(f"Loaded {len(vehicle_data)} URLs to process.")
+
+    processed_urls = collection.distinct('url')  # Retrieve all unique URLs already stored in MongoDB
+    print(f"Found {len(processed_urls)} URLs already processed.")
 
     try:
-        for url in urls:
-            extract_vehicle_specs(driver, url, collection)
-            time.sleep(2)  # General delay between requests to prevent rate limiting
+        for url, make, model, year in vehicle_data:
+            if url in processed_urls:
+                print(f"Skipping {url} as it is already processed.")
+                continue  # Skip this URL as it's already in the database
+            extract_vehicle_specs(driver, url, collection, make, model, year)
+            time.sleep(5)  # General delay between requests to prevent rate limiting
     finally:
-        print("hit final finally, quitting cleanly")
+        print("Script completed. Quitting driver.")
         driver.quit()
 
 if __name__ == "__main__":
