@@ -7,6 +7,7 @@ from fake_useragent import UserAgent
 import time
 import csv
 import os
+import requests
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 
@@ -114,28 +115,57 @@ def collect_vehicle_urls(driver):
         print(f"Data has been written to '{csv_filename}'")
         # driver.quit()
         return vehicle_urls
+    
+def check_redirects(url):
+    ua = UserAgent()
+    user_agent = ua.random
+    headers = {'User-Agent': user_agent}
+    try:
+        response = requests.get(url, headers=headers, timeout=10, allow_redirects=True)
+
+    except requests.exceptions.TooManyRedirects:
+        print(f"Too many redirects for {url}")
+        return True
+    except requests.exceptions.RequestException as e:
+        print(f"Error checking redirects for {url}: {e}")
+    return False
+
+def handle_captcha(driver):
+    print("Captcha detected. Waiting for user to resolve...")
+    WebDriverWait(driver, 600).until(
+        EC.presence_of_element_located((By.CSS_SELECTOR, ".specs-body-content"))
+    )
+    print("Captcha resolved. Continuing...")
 
 def extract_vehicle_specs(driver, url, specs_collection, error_collection, make, model, year):
+    if check_redirects(url):
+        error_collection.insert_one({'url': url, 'error': 'Too many redirects'})
+        return
+    
+
     driver.get(url)
     print(f"Attempting to load page: {url}")
     vehicle_specs = {'url': url, 'make': make, 'model': model, 'year': year}
 
+    # Handle captcha
+    if "Access to this page has been denied." in driver.title:
+        handle_captcha(driver)
+        print("Captcha handling complete")
+
     try:
+        # 404 error check
         error_check = driver.find_elements(By.CSS_SELECTOR, "h2.css-1emyy0d")
         if error_check and "Oops! We don't have the page you're looking for." in error_check[0].text:
             print(f"404 Error Page Detected at {url}. Adding to error collection.")
-            error_collection.insert_one({'url': url})
+            error_collection.insert_one({'url': url, 'error': '404 not found'})
             return None
-    except Exception as e:
-        print(f"Error checking for 404: {e}")
 
-    try:
+        print("No error's detected, extracting specifications")
+        # Extract specifications
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, ".specs-body-content"))
         )
         spec_categories = driver.find_elements(By.CSS_SELECTOR, 'div[data-spec="vehicle"]')
-        print(f"Found {len(spec_categories)} specification categories.")
-
         for category in spec_categories:
             category_name = category.find_element(By.CSS_SELECTOR, "h3").text
             items = category.find_elements(By.CSS_SELECTOR, ".css-9dhox.etxmilo0")
@@ -149,7 +179,7 @@ def extract_vehicle_specs(driver, url, specs_collection, error_collection, make,
         print("Data inserted or updated in MongoDB for", url)
     except TimeoutException:
         print(f"Timeout occurred while trying to load specifications from {url}. Adding delay before next request.")
-        time.sleep(30)
+        time.sleep(60)
     except NoSuchElementException:
         print(f"Failed to find specification elements on the page {url}.")
     except Exception as e:
