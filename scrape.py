@@ -27,8 +27,9 @@ def initialize_mongodb():
     uri = read_mongodb_uri()
     client = MongoClient(uri, server_api=ServerApi('1'))
     db = client['vehicle_data']
-    collection = db['specs']
-    return collection
+    specs_collection = db['specs']
+    error_collection = db['errors']
+    return specs_collection, error_collection
 
 def collect_vehicle_urls(driver):
     driver.get("https://www.caranddriver.com/acura/integra/specs")
@@ -114,7 +115,7 @@ def collect_vehicle_urls(driver):
         # driver.quit()
         return vehicle_urls
 
-def extract_vehicle_specs(driver, url, collection, make, model, year):
+def extract_vehicle_specs(driver, url, specs_collection, error_collection, make, model, year):
     driver.get(url)
     print(f"Attempting to load page: {url}")
     vehicle_specs = {'url': url, 'make': make, 'model': model, 'year': year}
@@ -122,8 +123,8 @@ def extract_vehicle_specs(driver, url, collection, make, model, year):
     try:
         error_check = driver.find_elements(By.CSS_SELECTOR, "h2.css-1emyy0d")
         if error_check and "Oops! We don't have the page you're looking for." in error_check[0].text:
-            print(f"404 Error Page Detected at {url}. Skipping...")
-            time.sleep(5)
+            print(f"404 Error Page Detected at {url}. Adding to error collection.")
+            error_collection.insert_one({'url': url})
             return None
     except Exception as e:
         print(f"Error checking for 404: {e}")
@@ -144,14 +145,11 @@ def extract_vehicle_specs(driver, url, collection, make, model, year):
                     vehicle_specs[data[0].strip()] = data[1].strip()
             print(f"Extracted data for category: {category_name}")
 
-        # Use upsert to prevent duplicates
-        query = {'url': url}
-        update = {'$set': vehicle_specs}
-        collection.update_one(query, update, upsert=True)
+        specs_collection.update_one({'url': url}, {'$set': vehicle_specs}, upsert=True)
         print("Data inserted or updated in MongoDB for", url)
     except TimeoutException:
         print(f"Timeout occurred while trying to load specifications from {url}. Adding delay before next request.")
-        time.sleep(60)  # Delay for 60 seconds before next request
+        time.sleep(30)
     except NoSuchElementException:
         print(f"Failed to find specification elements on the page {url}.")
     except Exception as e:
@@ -168,28 +166,24 @@ def read_vehicle_urls_from_csv(file_path):
 
 def main():
     driver = initialize_driver()
-    collection = initialize_mongodb()
-    csv_file = 'vehicle_specs_urls.csv'
-    if not os.path.exists(csv_file):
-        print("No URL CSV file found. Please ensure your URL list is available.")
-        return
+    specs_collection, error_collection = initialize_mongodb()
+    vehicle_data = read_vehicle_urls_from_csv('vehicle_specs_urls.csv')
 
-    vehicle_data = read_vehicle_urls_from_csv(csv_file)
-    print(f"Loaded {len(vehicle_data)} URLs to process.")
-
-    processed_urls = collection.distinct('url')  # Retrieve all unique URLs already stored in MongoDB
-    print(f"Found {len(processed_urls)} URLs already processed.")
+    processed_urls = set(specs_collection.distinct('url')) | set(error_collection.distinct('url'))
+    print(f"Loaded {len(vehicle_data)} URLs to process. Skipped {len(processed_urls)} already processed.")
 
     try:
         for url, make, model, year in vehicle_data:
             if url in processed_urls:
-                print(f"Skipping {url} as it is already processed.")
-                continue  # Skip this URL as it's already in the database
-            extract_vehicle_specs(driver, url, collection, make, model, year)
-            time.sleep(5)  # General delay between requests to prevent rate limiting
+                print(f"Skipping {url} as it has been processed or marked as an error.")
+                continue
+            extract_vehicle_specs(driver, url, specs_collection, error_collection, make, model, year)
+            time.sleep(5)
     finally:
-        print("Script completed. Quitting driver.")
         driver.quit()
+        print("Script completed. Quitting driver.")
+
+
 
 if __name__ == "__main__":
     main()
