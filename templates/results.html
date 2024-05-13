@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    {% if cars %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    {% for key in cars[0].keys() %}
+                        {% if key not in ['_id', 'make', 'model', 'year'] %}
+                            <th>{{ key }}</th>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for car in cars %}
+                    <tr>
+                        <td>{{ car.make }}</td>
+                        <td>{{ car.model }}</td>
+                        <td>{{ car.year }}</td>
+                        {% for key, value in car.items() %}
+                            {% if key not in ['_id', 'make', 'model', 'year'] %}
+                                <td>{{ value }}</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+    <a href="/">Back to search</a>
+</body>
+</html>

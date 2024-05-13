@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#make').change(function(){
+            var make = $(this).val();
+            $.getJSON('/models/' + make, function(data){
+                var modelSelect = $('#model');
+                modelSelect.empty();
+                modelSelect.append('<option value="">Select Model</option>');
+                data.forEach(function(model) {
+                    modelSelect.append('<option value="' + model + '">' + model + '</option>');
+                });
+            });
+        });
+
+        $('#model').change(function(){
+            var make = $('#make').val();
+            var model = $(this).val();
+            $.getJSON('/years/' + make + '/' + model, function(data){
+                var yearSelect = $('#year');
+                yearSelect.empty();
+                yearSelect.append('<option value="">Select Year</option>');
+                data.forEach(function(year) {
+                    yearSelect.append('<option value="' + year + '">' + year + '</option>');
+                });
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>Car Dashboard</h1>
+    <form action="/search" method="post">
+        <label for="make">Make:</label>
+        <select name="make" id="make">
+            <option value="">Select Make</option>
+            {% for make in makes %}
+            <option value="{{ make }}">{{ make }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="model">Model:</label>
+        <select name="model" id="model">
+            <option value="">Select Model</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select name="year" id="year">
+            <option value="">Select Year</option>
+        </select>
+
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
