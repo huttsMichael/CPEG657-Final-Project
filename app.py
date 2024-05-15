@@ -50,11 +50,12 @@ def fetch_data():
         draw = int(request.args.get('draw', 1))
         start = int(request.args.get('start', 0))
         length = int(request.args.get('length', 10))
-        sort_column_index = request.args.get('order[0][column]')
+        sort_column_index = int(request.args.get('order[0][column]', 0))
         sort_direction = request.args.get('order[0][dir]', 'asc')
         
         # Determine the column name to sort by
-        sort_column_name = request.args.get(f'columns[{sort_column_index}][data]', 'make')
+        columns = request.args.getlist('columns[]')
+        sort_column_name = columns[sort_column_index] if sort_column_index < len(columns) else 'make'
         
         # Get search value
         search_value = request.args.get('search[value]', '')
@@ -63,10 +64,6 @@ def fetch_data():
         print(f"Request parameters: {request.args}")
         print(f"Sorting by {sort_column_name} {sort_direction}")
         print(f"Search value: {search_value}")
-
-        # Extract columns correctly from the request
-        columns = request.args.getlist('columns[]')
-        print(f"Columns for search: {columns}")
 
         # Create a search query
         search_query = {}
@@ -79,12 +76,7 @@ def fetch_data():
         for i, col in enumerate(columns):
             col_search_value = request.args.get(f'columns[{i}][search][value]', '')
             if col_search_value:
-                # Handle range filters for numerical values (e.g., year range)
-                if '-' in col_search_value:
-                    start_val, end_val = col_search_value.split('-')
-                    search_query[col] = {"$gte": int(start_val), "$lte": int(end_val)}
-                else:
-                    search_query[col] = {'$regex': col_search_value, '$options': 'i'}
+                search_query[col] = {'$regex': col_search_value, '$options': 'i'}
                 print(f"Adding filter for column {col}: {search_query[col]}")
 
         # Apply sorting in MongoDB query
@@ -107,6 +99,8 @@ def fetch_data():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
+
+
 
 @app.route('/column_names')
 def column_names():

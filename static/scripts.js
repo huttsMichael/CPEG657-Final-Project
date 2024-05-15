@@ -3,10 +3,13 @@ $(document).ready(function() {
         // Append column headers and footers
         var theadTr = $('#vehicleTable thead tr');
         var tfootTr = $('#vehicleTable tfoot tr');
-        data.columns.forEach(function(column) {
+        data.columns.forEach(function(column, index) {
             theadTr.append('<th>' + column.title + '</th>');
-            tfootTr.append('<th><input type="text" placeholder="Search ' + column.title + '" /></th>');
+            tfootTr.append('<th><input type="text" placeholder="Search ' + column.title + '" data-index="' + index + '"/></th>');
         });
+
+        // Define default visible columns
+        var defaultVisibleColumns = ['make', 'model', 'year'];
 
         // Initialize DataTable
         var table = $('#vehicleTable').DataTable({
@@ -15,8 +18,10 @@ $(document).ready(function() {
                 "data": function(d) {
                     d.columns = data.columns.map(column => column.data);
                     // Add column-specific search values to the request
-                    d.columns.forEach((col, i) => {
-                        d[`columns[${i}][search][value]`] = $(`#vehicleTable tfoot tr th:eq(${i}) input`).val();
+                    $('#vehicleTable tfoot input').each(function() {
+                        var i = $(this).data('index');
+                        d[`columns[${i}][search][value]`] = this.value;
+                        console.log(`Column ${data.columns[i].data}: Search value = ${this.value}`);
                     });
                     return d;
                 }
@@ -27,7 +32,7 @@ $(document).ready(function() {
                 "data": column.data,
                 "title": column.title,
                 "defaultContent": "",
-                "visible": ["make", "model", "year"].includes(column.data),
+                "visible": defaultVisibleColumns.includes(column.data),
                 "orderable": true
             })),
             "dom": '<"top"Bf>rt<"bottom"lip><"clear">',
