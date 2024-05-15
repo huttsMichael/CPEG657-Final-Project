@@ -17,45 +17,47 @@ def initialize_driver():
     return driver
 
 def extract_vehicle_specs(driver, url, make, model, year, db_update=False):
-    driver.get(url)
     print(f"Attempting to load page: {url}")
     vehicle_specs = {'url': url, 'make': make, 'model': model, 'year': year}
-
+    
     if db_update:
         specs_collection, error_collection = initialize_mongodb()
 
-    try:
-        if "Access to this page has been denied." in driver.title:
-            print("CAPTCHA or access denied detected.")
-            if db_update:
-                error_collection.insert_one({'url': url, 'error': 'CAPTCHA or access denied'})
-            return
+    driver.get(url)
 
+    try:
+        # Wait until the specs content is visible
         WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, ".specs-body-content"))
         )
+        
         spec_categories = driver.find_elements(By.CSS_SELECTOR, 'div[data-spec="vehicle"]')
         for category in spec_categories:
-            category_name = category.find_element(By.CSS_SELECTOR, "h3").text
             items = category.find_elements(By.CSS_SELECTOR, ".css-9dhox.etxmilo0")
-            category_specs = {}
             for item in items:
-                data = item.text.split(':')
-                if len(data) == 2:
-                    category_specs[data[0].strip()] = data[1].strip()
-            print(f"Extracted data for category '{category_name}': {category_specs}")
-            vehicle_specs[category_name] = category_specs
+                try:
+                    key = item.find_element(By.CSS_SELECTOR, "div:first-child").text.strip(':').strip().replace(" ", "_")
+                    value = item.find_element(By.CSS_SELECTOR, "div:last-child").text.strip()
+                    vehicle_specs[key] = value
+                except NoSuchElementException:
+                    print(f"Element not found within the category, skipping this key-value pair.")
 
         print("Final extracted data:", vehicle_specs)
         if db_update:
-            specs_collection.update_one({'url': url}, {'$set': vehicle_specs}, upsert=True)
-            print("Data inserted or updated in MongoDB for", url)
-    except TimeoutException:
-        print(f"Timeout occurred while trying to load specifications from {url}.")
-    except NoSuchElementException:
-        print(f"Failed to find specification elements on the page {url}.")
+            result = specs_collection.update_one({'url': url}, {'$set': vehicle_specs}, upsert=True)
+            print(f"Data inserted or updated in MongoDB for {url}, affected documents: {result.modified_count}")
+            time.sleep(180)
+            exit()
+
+    except TimeoutException as e:
+        print(f"Timeout occurred while waiting for page elements: {e}")
+    except NoSuchElementException as e:
+        print(f"Failed to find expected elements on the page, review CSS selectors: {e}")
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
+    
+
 
 def main(db_update=True, recheck=False):
     driver = initialize_driver()
@@ -81,4 +83,4 @@ def main(db_update=True, recheck=False):
         print("Script completed. Quitting driver.")
 
 if __name__ == "__main__":
-    main(db_update=False, recheck=True)  # Set db_update and recheck as needed
+    main(db_update=True, recheck=True)  # Set db_update and recheck as needed
