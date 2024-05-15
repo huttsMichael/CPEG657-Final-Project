@@ -1,59 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Car Dashboard</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('#make').change(function(){
-            var make = $(this).val();
-            $.getJSON('/models/' + make, function(data){
-                var modelSelect = $('#model');
-                modelSelect.empty();
-                modelSelect.append('<option value="">Select Model</option>');
-                data.forEach(function(model) {
-                    modelSelect.append('<option value="' + model + '">' + model + '</option>');
-                });
-            });
-        });
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Database</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        #vehicleTable_wrapper {
+            margin-top: 20px;
+        }
+        .dataTables_wrapper .dt-buttons {
+            margin-right: 10px; /* Adjust as per your layout */
+        }
+        .dataTables_filter {
+            float: left; /* Aligns the search box to the left */
+        }
+        .dataTables_filter input {
+            margin-left: 0.5em;
+            border: 1px solid #ccc;
+            padding: 5px;
+            width: 200px; /* Wider search box */
+        }
+        thead {
+            background-color: #44aaff; /* Adds a solid color to the table header */
+            color: white;
+        }
 
-        $('#model').change(function(){
-            var make = $('#make').val();
-            var model = $(this).val();
-            $.getJSON('/years/' + make + '/' + model, function(data){
-                var yearSelect = $('#year');
-                yearSelect.empty();
-                yearSelect.append('<option value="">Select Year</option>');
-                data.forEach(function(year) {
-                    yearSelect.append('<option value="' + year + '">' + year + '</option>');
-                });
-            });
-        });
-    });
-    </script>
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.colVis.min.js"></script>
 </head>
 <body>
-    <h1>Car Dashboard</h1>
-    <form action="/search" method="post">
-        <label for="make">Make:</label>
-        <select name="make" id="make">
-            <option value="">Select Make</option>
-            {% for make in makes %}
-            <option value="{{ make }}">{{ make }}</option>
-            {% endfor %}
-        </select>
+    <h1>Vehicle Database</h1>
+    <table id="vehicleTable" class="display" style="width:100%">
+        <thead>
+            <tr></tr> <!-- This will be populated dynamically by DataTables -->
+        </thead>
+    </table>
 
-        <label for="model">Model:</label>
-        <select name="model" id="model">
-            <option value="">Select Model</option>
-        </select>
-
-        <label for="year">Year:</label>
-        <select name="year" id="year">
-            <option value="">Select Year</option>
-        </select>
-
-        <button type="submit">Search</button>
-    </form>
+    <script>
+        $(document).ready(function() {
+            $.getJSON('/column_names', function(data) {
+                $('#vehicleTable').DataTable({
+                    "ajax": "/fetch_data",
+                    "serverSide": true,
+                    "processing": true,
+                    "columns": data.columns.map(column => ({
+                        "data": column.data,
+                        "title": column.title,
+                        "defaultContent": "",
+                        "visible": ["make", "model", "year"].includes(column.data),
+                        "orderable": true
+                    })),
+                    "dom": '<"top"Bf>rt<"bottom"lip><"clear">',
+                    "buttons": [
+                        {
+                            extend: 'colvis',
+                            text: 'Column visibility',
+                            className: 'btn-primary',
+                            columns: ':not(.noVis)'
+                        }
+                    ],
+                    "initComplete": function() {
+                        this.api().columns().every(function() {
+                            var column = this;
+                            var select = $('<select><option value=""></option></select>')
+                                .appendTo($(column.footer()).empty())
+                                .on('change', function() {
+                                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                                    column.search(val ? '^' + val + '$' : '', true, false).draw();
+                                });
+                            column.data().unique().sort().each(function(d) {
+                                select.append('<option value="' + d + '">' + d + '</option>');
+                            });
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
