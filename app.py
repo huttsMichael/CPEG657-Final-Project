@@ -51,29 +51,45 @@ def fetch_data():
         # Determine the column name to sort by
         sort_column_name = request.args.get(f'columns[{sort_column_index}][data]', 'make')
         
+        # Get search value
+        search_value = request.args.get('search[value]', '')
+
         # Logging to debug
+        print(f"Request parameters: {request.args}")
         print(f"Sorting by {sort_column_name} {sort_direction}")
+        print(f"Search value: {search_value}")
+
+        # Extract columns correctly from the request
+        columns = request.args.getlist('columns[]')
+        print(f"Columns for search: {columns}")
+
+        # Create a search query
+        search_query = {}
+        if search_value:
+            search_regex = {'$regex': search_value, '$options': 'i'}
+            search_query = {"$or": [{col: search_regex} for col in columns if col]}
+            print(f"Constructed search query: {search_query}")
 
         # Apply sorting in MongoDB query
         sort_order = pymongo.ASCENDING if sort_direction == 'asc' else pymongo.DESCENDING
-        data = list(specs_collection.find({}, {'_id': False})
+        data = list(specs_collection.find(search_query, {'_id': False})
                     .sort(sort_column_name, sort_order)
                     .skip(start).limit(length))
 
         total_count = specs_collection.count_documents({})
+        filtered_count = specs_collection.count_documents(search_query)
         clean_data = [{clean_column_name(k): v for k, v in item.items()} for item in data]
 
         response = {
             "draw": draw,
             "recordsTotal": total_count,
-            "recordsFiltered": total_count,
+            "recordsFiltered": filtered_count,
             "data": clean_data
         }
         return jsonify(response)
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
-
 
 
 @app.route('/column_names')

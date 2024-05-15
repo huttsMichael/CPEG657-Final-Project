@@ -51,7 +51,13 @@
         $(document).ready(function() {
             $.getJSON('/column_names', function(data) {
                 $('#vehicleTable').DataTable({
-                    "ajax": "/fetch_data",
+                    "ajax": {
+                        "url": "/fetch_data",
+                        "data": function(d) {
+                            d.columns = data.columns.map(column => column.data);
+                            return d;
+                        }
+                    },
                     "serverSide": true,
                     "processing": true,
                     "columns": data.columns.map(column => ({
@@ -88,5 +94,6 @@
             });
         });
     </script>
+
 </body>
 </html>
