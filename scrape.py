@@ -16,6 +16,8 @@ def initialize_driver():
     options.add_argument(f'--user-agent={user_agent}')
     return driver
 
+
+
 def extract_vehicle_specs(driver, url, make, model, year, db_update=False):
     print(f"Attempting to load page: {url}")
     vehicle_specs = {'url': url, 'make': make, 'model': model, 'year': year}
@@ -56,7 +58,6 @@ def extract_vehicle_specs(driver, url, make, model, year, db_update=False):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
 
-    
 
 
 def main(db_update=True, recheck=False):
