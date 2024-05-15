@@ -6,38 +6,7 @@
     <title>Vehicle Database</title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.0.0/css/buttons.dataTables.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        #vehicleTable_wrapper {
-            margin-top: 20px;
-        }
-        .dataTables_wrapper .dt-buttons {
-            margin-right: 10px; /* Adjust as per your layout */
-        }
-        .dataTables_filter {
-            float: left; /* Aligns the search box to the left */
-        }
-        .dataTables_filter input {
-            margin-left: 0.5em;
-            border: 1px solid #ccc;
-            padding: 5px;
-            width: 200px; /* Wider search box */
-        }
-        thead {
-            background-color: #44aaff; /* Adds a solid color to the table header */
-            color: white;
-        }
-
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.colVis.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Vehicle Database</h1>
@@ -45,55 +14,15 @@
         <thead>
             <tr></tr> <!-- This will be populated dynamically by DataTables -->
         </thead>
+        <tfoot>
+            <tr></tr> <!-- This will be populated dynamically by DataTables -->
+        </tfoot>
     </table>
 
-    <script>
-        $(document).ready(function() {
-            $.getJSON('/column_names', function(data) {
-                $('#vehicleTable').DataTable({
-                    "ajax": {
-                        "url": "/fetch_data",
-                        "data": function(d) {
-                            d.columns = data.columns.map(column => column.data);
-                            return d;
-                        }
-                    },
-                    "serverSide": true,
-                    "processing": true,
-                    "columns": data.columns.map(column => ({
-                        "data": column.data,
-                        "title": column.title,
-                        "defaultContent": "",
-                        "visible": ["make", "model", "year"].includes(column.data),
-                        "orderable": true
-                    })),
-                    "dom": '<"top"Bf>rt<"bottom"lip><"clear">',
-                    "buttons": [
-                        {
-                            extend: 'colvis',
-                            text: 'Column visibility',
-                            className: 'btn-primary',
-                            columns: ':not(.noVis)'
-                        }
-                    ],
-                    "initComplete": function() {
-                        this.api().columns().every(function() {
-                            var column = this;
-                            var select = $('<select><option value=""></option></select>')
-                                .appendTo($(column.footer()).empty())
-                                .on('change', function() {
-                                    var val = $.fn.dataTable.util.escapeRegex($(this).val());
-                                    column.search(val ? '^' + val + '$' : '', true, false).draw();
-                                });
-                            column.data().unique().sort().each(function(d) {
-                                select.append('<option value="' + d + '">' + d + '</option>');
-                            });
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.0.0/js/buttons.colVis.min.js"></script>
+    <script src="/static/scripts.js"></script>
 </body>
 </html>
