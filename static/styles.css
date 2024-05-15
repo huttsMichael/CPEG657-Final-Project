@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#vehicleTable_wrapper {
+    margin-top: 20px;
+}
+
+.dataTables_wrapper .dt-buttons {
+    margin-right: 10px; /* Adjust as per your layout */
+}
+
+.dataTables_filter {
+    float: left; /* Aligns the search box to the left */
+}
+
+.dataTables_filter input {
+    margin-left: 0.5em;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 200px; /* Wider search box */
+}
+
+thead {
+    background-color: #44aaff; /* Adds a solid color to the table header */
+    color: white;
+}

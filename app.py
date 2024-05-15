@@ -1,8 +1,9 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, send_from_directory
 from pymongo import MongoClient
 import pymongo
 from bson import ObjectId
 import json
+import os
 
 app = Flask(__name__)
 
@@ -34,6 +35,10 @@ specs_collection = initialize_mongodb()
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('static', path)
 
 def clean_column_name(name):
     """ Simplifies column names for JavaScript compatibility """
@@ -70,6 +75,18 @@ def fetch_data():
             search_query = {"$or": [{col: search_regex} for col in columns if col]}
             print(f"Constructed search query: {search_query}")
 
+        # Column-specific filtering
+        for i, col in enumerate(columns):
+            col_search_value = request.args.get(f'columns[{i}][search][value]', '')
+            if col_search_value:
+                # Handle range filters for numerical values (e.g., year range)
+                if '-' in col_search_value:
+                    start_val, end_val = col_search_value.split('-')
+                    search_query[col] = {"$gte": int(start_val), "$lte": int(end_val)}
+                else:
+                    search_query[col] = {'$regex': col_search_value, '$options': 'i'}
+                print(f"Adding filter for column {col}: {search_query[col]}")
+
         # Apply sorting in MongoDB query
         sort_order = pymongo.ASCENDING if sort_direction == 'asc' else pymongo.DESCENDING
         data = list(specs_collection.find(search_query, {'_id': False})
@@ -91,7 +108,6 @@ def fetch_data():
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
-
 @app.route('/column_names')
 def column_names():
     sample_doc = specs_collection.find_one()
@@ -107,9 +123,6 @@ def column_names():
         return jsonify({'columns': columns})
     else:
         return jsonify({'error': 'No data available'})
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
