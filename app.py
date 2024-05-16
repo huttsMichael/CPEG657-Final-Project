@@ -28,7 +28,7 @@ def initialize_mongodb():
     uri = read_mongodb_uri()
     client = MongoClient(uri)
     db = client['vehicle_data']
-    return db['specs']
+    return db['specs_improved']
 
 specs_collection = initialize_mongodb()
 
@@ -39,10 +39,6 @@ def index():
 @app.route('/static/<path:path>')
 def send_static(path):
     return send_from_directory('static', path)
-
-def clean_column_name(name):
-    """ Simplifies column names for JavaScript compatibility """
-    return name.replace(' ', '_').replace('(', '').replace(')', '').replace('-', '_')
 
 @app.route('/fetch_data', methods=['GET', 'POST'])
 def fetch_data():
@@ -87,20 +83,17 @@ def fetch_data():
 
         total_count = specs_collection.count_documents({})
         filtered_count = specs_collection.count_documents(search_query)
-        clean_data = [{clean_column_name(k): v for k, v in item.items()} for item in data]
 
         response = {
             "draw": draw,
             "recordsTotal": total_count,
             "recordsFiltered": filtered_count,
-            "data": clean_data
+            "data": data
         }
         return jsonify(response)
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
-
-
 
 @app.route('/column_names')
 def column_names():
@@ -113,7 +106,7 @@ def column_names():
 
         # Order columns: priority, others, last
         ordered_columns = priority_columns + other_columns + last_columns
-        columns = [{'data': clean_column_name(k), 'title': k} for k in ordered_columns]
+        columns = [{'data': k, 'title': k} for k in ordered_columns]
         return jsonify({'columns': columns})
     else:
         return jsonify({'error': 'No data available'})

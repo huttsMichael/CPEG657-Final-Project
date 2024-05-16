@@ -3,9 +3,9 @@ $(document).ready(function() {
         // Append column headers and footers
         var theadTr = $('#vehicleTable thead tr');
         var tfootTr = $('#vehicleTable tfoot tr');
-        data.columns.forEach(function(column, index) {
+        data.columns.forEach(function(column) {
             theadTr.append('<th>' + column.title + '</th>');
-            tfootTr.append('<th><input type="text" placeholder="Search ' + column.title + '" data-index="' + index + '"/></th>');
+            tfootTr.append('<th><input type="text" placeholder="Search ' + column.title + '" /></th>');
         });
 
         // Define default visible columns
@@ -18,10 +18,10 @@ $(document).ready(function() {
                 "data": function(d) {
                     d.columns = data.columns.map(column => column.data);
                     // Add column-specific search values to the request
-                    $('#vehicleTable tfoot input').each(function() {
-                        var i = $(this).data('index');
-                        d[`columns[${i}][search][value]`] = this.value;
-                        console.log(`Column ${data.columns[i].data}: Search value = ${this.value}`);
+                    d.columns.forEach((col, i) => {
+                        var searchValue = $(`#vehicleTable tfoot tr th:eq(${i}) input`).val();
+                        d[`columns[${i}][search][value]`] = searchValue;
+                        console.log(`Column ${col}: Search value = ${searchValue}`);
                     });
                     return d;
                 }
