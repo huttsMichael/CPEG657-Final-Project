@@ -9,6 +9,6 @@ def initialize_mongodb():
     uri = read_mongodb_uri()
     client = MongoClient(uri, server_api=ServerApi('1'))
     db = client['vehicle_data']
-    specs_collection = db['specs']
+    specs_collection = db['specs_improved']
     error_collection = db['errors']
     return specs_collection, error_collection
