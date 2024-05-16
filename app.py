@@ -48,11 +48,11 @@ def fetch_data():
         length = int(request.args.get('length', 10))
         sort_column_index = int(request.args.get('order[0][column]', 0))
         sort_direction = request.args.get('order[0][dir]', 'asc')
-        
+
         # Determine the column name to sort by
         columns = request.args.getlist('columns[]')
         sort_column_name = columns[sort_column_index] if sort_column_index < len(columns) else 'make'
-        
+
         # Get search value
         search_value = request.args.get('search[value]', '')
 
@@ -71,9 +71,32 @@ def fetch_data():
         # Column-specific filtering
         for i, col in enumerate(columns):
             col_search_value = request.args.get(f'columns[{i}][search][value]', '')
+            min_value = request.args.get(f'columns[{i}][search][min]', '')
+            max_value = request.args.get(f'columns[{i}][search][max]', '')
+
             if col_search_value:
-                search_query[col] = {'$regex': col_search_value, '$options': 'i'}
+                if col in search_query:
+                    search_query[col].update({'$regex': col_search_value, '$options': 'i'})
+                else:
+                    search_query[col] = {'$regex': col_search_value, '$options': 'i'}
                 print(f"Adding filter for column {col}: {search_query[col]}")
+
+            if min_value or max_value:
+                range_query = {}
+                if min_value:
+                    range_query['$gte'] = min_value
+                if max_value:
+                    range_query['$lte'] = max_value
+
+                if range_query:
+                    if col in search_query:
+                        search_query[col].update(range_query)
+                    else:
+                        search_query[col] = range_query
+                    print(f"Adding range filter for column {col}: {search_query[col]}")
+
+        # Log the final query before execution
+        print(f"Final search query: {search_query}")
 
         # Apply sorting in MongoDB query
         sort_order = pymongo.ASCENDING if sort_direction == 'asc' else pymongo.DESCENDING
@@ -94,6 +117,11 @@ def fetch_data():
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
+
+
+
+
+
 
 @app.route('/column_names')
 def column_names():

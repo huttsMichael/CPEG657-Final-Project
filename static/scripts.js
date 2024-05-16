@@ -5,7 +5,12 @@ $(document).ready(function() {
         var tfootTr = $('#vehicleTable tfoot tr');
         data.columns.forEach(function(column) {
             theadTr.append('<th>' + column.title + '</th>');
-            tfootTr.append('<th><input type="text" placeholder="Search ' + column.title + '" /></th>');
+            tfootTr.append('<th>' +
+                '<input type="text" placeholder="Search ' + column.title + '" />' +
+                '<br>' +
+                '<input type="number" placeholder="Min" style="width: 45%;" />' +
+                '<input type="number" placeholder="Max" style="width: 45%;" />' +
+                '</th>');
         });
 
         // Define default visible columns
@@ -19,9 +24,13 @@ $(document).ready(function() {
                     d.columns = data.columns.map(column => column.data);
                     // Add column-specific search values to the request
                     d.columns.forEach((col, i) => {
-                        var searchValue = $(`#vehicleTable tfoot tr th:eq(${i}) input`).val();
+                        var searchValue = $(`#vehicleTable tfoot tr th:eq(${i}) input[type="text"]`).val();
                         d[`columns[${i}][search][value]`] = searchValue;
-                        console.log(`Column ${col}: Search value = ${searchValue}`);
+                        var minValue = $(`#vehicleTable tfoot tr th:eq(${i}) input[placeholder="Min"]`).val();
+                        var maxValue = $(`#vehicleTable tfoot tr th:eq(${i}) input[placeholder="Max"]`).val();
+                        d[`columns[${i}][search][min]`] = minValue;
+                        d[`columns[${i}][search][max]`] = maxValue;
+                        console.log(`Column ${col}: Search value = ${searchValue}, Min = ${minValue}, Max = ${maxValue}`);
                     });
                     return d;
                 }
@@ -49,10 +58,14 @@ $(document).ready(function() {
         // Apply the search
         table.columns().every(function() {
             var column = this;
-            $('input', column.footer()).on('keyup change clear', function() {
+            $('input[type="text"]', column.footer()).on('keyup change clear', function() {
                 if (column.search() !== this.value) {
                     column.search(this.value).draw();
                 }
+            });
+
+            $('input[type="number"]', column.footer()).on('keyup change clear', function() {
+                table.draw();
             });
         });
     });
