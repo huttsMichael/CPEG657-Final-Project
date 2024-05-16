@@ -48,8 +48,6 @@ def extract_vehicle_specs(driver, url, make, model, year, db_update=False):
         if db_update:
             result = specs_collection.update_one({'url': url}, {'$set': vehicle_specs}, upsert=True)
             print(f"Data inserted or updated in MongoDB for {url}, affected documents: {result.modified_count}")
-            time.sleep(180)
-            exit()
 
     except TimeoutException as e:
         print(f"Timeout occurred while waiting for page elements: {e}")
@@ -84,4 +82,4 @@ def main(db_update=True, recheck=False):
         print("Script completed. Quitting driver.")
 
 if __name__ == "__main__":
-    main(db_update=True, recheck=True)  # Set db_update and recheck as needed
+    main(db_update=True, recheck=False)  # Set db_update and recheck as needed
