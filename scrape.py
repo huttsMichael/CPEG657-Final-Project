@@ -51,6 +51,7 @@ def extract_vehicle_specs(driver, url, make, model, year, db_update=False):
 
     except TimeoutException as e:
         print(f"Timeout occurred while waiting for page elements: {e}")
+        time.sleep(20)
     except NoSuchElementException as e:
         print(f"Failed to find expected elements on the page, review CSS selectors: {e}")
     except Exception as e:
