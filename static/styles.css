@@ -10,21 +10,21 @@ body {
 }
 
 .dataTables_wrapper .dt-buttons {
-    margin-right: 10px; /* Adjust as per your layout */
+    margin-right: 10px;
 }
 
 .dataTables_filter {
-    float: left; /* Aligns the search box to the left */
+    float: left;
 }
 
 .dataTables_filter input {
     margin-left: 0.5em;
     border: 1px solid #ccc;
     padding: 5px;
-    width: 200px; /* Wider search box */
+    width: 200px;
 }
 
 thead {
-    background-color: #44aaff; /* Adds a solid color to the table header */
+    background-color: #44aaff;
     color: white;
 }
