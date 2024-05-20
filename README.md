@@ -11,7 +11,7 @@
 
 ## Setup and Usage
 ### MongoDB
-If you want to skip scraping, a full dump is availible in the dump/ folder. Simply import that into MongoDB and it should work. Then add your own mongouri to mongo_creds.txt and all code should work.
+If you want to skip scraping, a full dump is availible in the dump/ folder. Simply import that into MongoDB and it should work. Then add your own mongouri to mongo_uri.txt and all code should work.
 
 ### Scraping
 Run `scrape.py`. DB updating and rechecking is configured in main.
